@@ -153,7 +153,11 @@
       <span>初回相談 無料</span>
       <h3>技術と事業の論点を、<br>60分で整理します。</h3>
       <p>オンライン対応。案件の構想段階でもご相談いただけます。</p>
-      <a href="mailto:info@tkg-energy.com">info@tkg-energy.com</a>
+      <div class="contact-email-row">
+        <a href="mailto:info@tkg-energy.com">info@tkg-energy.com</a>
+        <button type="button" class="copy-email" data-email="info@tkg-energy.com" aria-label="メールアドレスをコピー">コピー</button>
+      </div>
+      <p class="copy-note" aria-live="polite"></p>
     </div>
   </div>
 </section>
@@ -167,5 +171,21 @@
   <a href="#top">BACK TO TOP ↑</a>
 </footer>
 </main>
+
+<script>
+document.querySelectorAll('.copy-email').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var email = btn.getAttribute('data-email');
+    var card = btn.closest('.contact-card');
+    var note = card ? card.querySelector('.copy-note') : null;
+    var done = function(text){ if(note){ note.textContent = text; } };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(function(){ done('コピーしました: ' + email); }).catch(function(){ done(email); });
+    } else {
+      done(email);
+    }
+  });
+});
+</script>
 </body>
 </html>

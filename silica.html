@@ -118,9 +118,28 @@
   </div>
   <div>
     <p>将来のサンプル評価、用途探索、共同検討に関心のある企業・研究機関の方へ。構想段階からでもご相談いただけます。</p>
-    <a href="mailto:info@tkg-energy.com">info@tkg-energy.com <span>→</span></a>
+    <div class="contact-email-row">
+      <a href="mailto:info@tkg-energy.com">info@tkg-energy.com <span>→</span></a>
+      <button type="button" class="copy-email" data-email="info@tkg-energy.com" aria-label="メールアドレスをコピー">コピー</button>
+    </div>
+    <p class="copy-note" aria-live="polite"></p>
   </div>
 </section>
+
+<script>
+document.querySelectorAll('.copy-email').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var email = btn.getAttribute('data-email');
+    var note = btn.parentElement.parentElement.querySelector('.copy-note');
+    var done = function(text){ if(note){ note.textContent = text; } };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(function(){ done('コピーしました: ' + email); }).catch(function(){ done(email); });
+    } else {
+      done(email);
+    }
+  });
+});
+</script>
 
 <footer class="footer">
   <div class="footer-brand">
