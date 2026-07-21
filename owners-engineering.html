@@ -8,6 +8,19 @@
 <link rel="canonical" href="https://www.tkg-energy.com/owners-engineering">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/company.css">
+<style>
+/* このページ固有の調整 */
+.oe-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
+.oe-cards article{border:1px solid var(--line);background:var(--paper);padding:26px 24px}
+.oe-cards article span{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:12px}
+.oe-cards article h3{margin:0 0 10px;font-size:17px;line-height:1.5}
+.oe-cards article p{margin:0;font-size:13.5px;line-height:1.9;color:var(--muted)}
+.oe-cards.two{grid-template-columns:repeat(2,1fr)}
+.oe-note{border-left:2px solid var(--gold);padding:14px 20px;margin-top:32px;font-size:13.5px;line-height:2;color:var(--muted);max-width:860px}
+.oe-note b{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:6px}
+#contact .contact-card h3{font-size:16px;line-height:1.7;white-space:nowrap}
+@media (max-width:900px){.oe-cards{grid-template-columns:1fr}#contact .contact-card h3{white-space:normal}}
+</style>
 </head>
 <body class="antialiased">
 <main>
@@ -36,7 +49,7 @@
     </div>
   </div>
   <div class="hero-visual">
-    <img src="assets/hero-engineering.png" alt="エンジニアが図面と見積書を確認している線画">
+    <img src="assets/oe-hero.png" alt="発注者側の担当者が設計図書と見積を確認しているイラスト">
     <div class="hero-caption">
       <span>ADVISORY POSITION</span>
       <p>発注者側の技術論点を整理し、<br>メーカー・EPCとの折衝を支援します。</p>
@@ -49,15 +62,12 @@
     <div><span>01 / CONSULTATIONS</span><h2>こういうご相談を受けています。</h2></div>
     <p>発注者側で不足する技術判断を、案件に必要な範囲で補います。</p>
   </div>
-  <div class="method-grid">
-    <article><span>1</span><h3>設計書・見積の妥当性</h3><p>プラント・設備のEPC発注を控えているが、メーカーの設計書や見積内訳の妥当性を社内で判断できない</p></article>
-    <article><span>2</span><h3>スペックの適正</h3><p>提示されたスペックが過剰なのか適正なのか、比べる物差しがない</p></article>
-    <article><span>3</span><h3>法規が絡む設計検討</h3><p>ガス事業法・高圧ガス保安法の適用を受ける設備の設計検討で、技術面の論点整理が追いつかない</p></article>
+  <div class="oe-cards">
+    <article><span>CASE 01</span><h3>設計書・見積の妥当性</h3><p>プラント・設備のEPC発注を控えているが、メーカーの設計書や見積内訳の妥当性を社内で判断できない。</p></article>
+    <article><span>CASE 02</span><h3>スペックの適正</h3><p>提示されたスペックが過剰なのか適正なのか、比べる物差しがない。</p></article>
+    <article><span>CASE 03</span><h3>法規が絡む設計検討</h3><p>ガス事業法・高圧ガス保安法の適用を受ける設備の設計検討で、技術面の論点整理が追いつかない。</p></article>
   </div>
-  <div class="audience">
-    <span>NOTE</span>
-    <p>許認可手続・保安管理業務そのものは、事業者および有資格者の業務です。当社はその前段の技術検討と、メーカー・EPCとの折衝を支援します。</p>
-  </div>
+  <p class="oe-note"><b>NOTE</b>許認可手続・保安管理業務そのものは、事業者および有資格者の業務です。当社はその前段の技術検討と、メーカー・EPCとの折衝を支援します。</p>
 </section>
 
 <section class="section scope blueprint" id="services">
@@ -80,21 +90,18 @@
     <div><span>03 / ENGAGEMENT</span><h2>契約と関わり方。</h2></div>
     <p>常駐ではなく、週次定例と図書レビューを軸に、必要な場面で関与します。</p>
   </div>
-  <div class="method-grid">
-    <article><span>A</span><h3>顧問型</h3><p>月間上限時間を定めた準委任</p></article>
-    <article><span>B</span><h3>スポット型</h3><p>設計図書レビュー・検査立会いの単発</p></article>
-    <article><span>1</span><h3>週次オンライン定例</h3><p>WEEKLY MEETING</p></article>
-    <article><span>2</span><h3>図書レビュー</h3><p>非同期・DOCUMENT REVIEW</p></article>
-    <article><span>3</span><h3>検査・キックオフ</h3><p>必要時のみ現地</p></article>
-    <article><span>4</span><h3>体制</h3><p>代表が全件直接担当・再委託なし</p></article>
+  <div class="oe-cards two">
+    <article><span>TYPE A / ADVISORY</span><h3>顧問型</h3><p>月間上限時間を定めた準委任。週次のオンライン定例と、設計図書の非同期レビューを組み合わせます。</p></article>
+    <article><span>TYPE B / SPOT</span><h3>スポット型</h3><p>設計図書レビューや検査立会いの単発のご依頼。検査・キックオフなど必要な場面のみ現地に伺います。</p></article>
   </div>
-  <div class="audience">
-    <span>SCOPE</span>
-    <p>常駐・フルタイムのご依頼はお受けしていません。電気設計の細部など専門外の領域は、その分野の外部専門家を起用し、当社はチェックする立場に回ります。準委任契約を基本とし、秘密保持契約を締結のうえ着手します。</p>
-  </div>
+  <p class="oe-note"><b>SCOPE</b>常駐・フルタイムのご依頼はお受けしていません。業務は代表が全件直接担当し、再委託はしません。電気設計の細部など専門外の領域は、その分野の外部専門家を起用し、当社はチェックする立場に回ります。準委任契約を基本とし、秘密保持契約を締結のうえ着手します。</p>
 </section>
 
 <section class="section rd-section" id="why">
+  <div class="rd-visual">
+    <img src="assets/oe-flow.png" alt="設計図書の確認、対面での折衝、報告書の提出という支援の流れを示すイラスト">
+    <span>REVIEW / NEGOTIATION / REPORT</span>
+  </div>
   <div class="rd-copy">
     <span>04 / WHY OWNER'S SIDE</span>
     <h2>なぜ発注者側に<br>立てるのか。</h2>
@@ -114,7 +121,7 @@
       <div class="advisor-index"><span>13</span><small>YEARS / EPC</small></div>
       <b>MECHANICAL DESIGN / CONSTRUCTION / COMMISSIONING</b>
       <h3>エンジニアリング会社側</h3>
-      <p>大手エンジニアリング会社で13年間、プラントの機械設計・建設・試運転に従事。主にLNG受入基地・熱量調整設備・BOG昇圧設備を担当。ガスの圧縮・熱交換・物性管理に関わるプロセス機械が専門。地熱発電プラント（20億円規模）のエンジニアリングマネジメントも経験。</p>
+      <p>大手エンジニアリング会社で13年間、プラントの機械設計・建設・試運転に従事。主にLNG受入基地・熱量調整設備・BOG昇圧設備を担当。ガスの圧縮・熱交換・物性管理に関わるプロセス機械が専門。地熱発電プラントのエンジニアリングマネジメントも経験。</p>
     </article>
     <article>
       <div class="advisor-index"><span>2</span><small>YEARS / OWNER</small></div>
@@ -139,7 +146,7 @@
     <div class="contact-card">
       <img src="assets/logo.png" alt="">
       <span>初回相談 無料</span>
-      <h3>発注前の不安を、<br>60分で論点にします。</h3>
+      <h3>発注前の不安を、60分で論点にします。</h3>
       <p>オンライン対応。EPC発注の構想段階でもご相談いただけます。</p>
       <div class="contact-email-row">
         <a href="mailto:info@tkg-energy.com">info@tkg-energy.com</a>
