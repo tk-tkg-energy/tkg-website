@@ -20,6 +20,11 @@
 .oe-note b{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:6px}
 #contact .contact-card h3{font-size:16px;line-height:1.7;white-space:nowrap}
 @media (max-width:900px){.oe-cards{grid-template-columns:1fr}#contact .contact-card h3{white-space:normal}}
+/* company.cssのグローバルルール(.hero-visual を width>=981pxでhero-engineering.png背景に強制置換)から本ページを除外 */
+@media (width>=981px){
+  #top .hero-visual{background-image:none!important}
+  #top .hero-visual img{display:block!important}
+}
 </style>
 </head>
 <body class="antialiased">
