@@ -3,11 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>東京共同技術株式会社 | 技術の可能性を、社会実装へ。</title>
-<meta name="description" content="PoCの妥当性検証から事業化、試運転、社会実装まで。再生可能エネルギー・脱炭素事業を支える技術コンサルティング。">
+<title>東京共同技術株式会社 | エネルギー事業の技術支援</title>
+<meta name="description" content="ガス・液化ガス設備、バイオマス・バイオガス、資源循環を対象に、構想・事業性評価から発注者側支援、プラントの試運転・立ち上げまでを支援する技術コンサルティング会社です。">
 <link rel="canonical" href="https://www.tkg-energy.com/">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="assets/company.css">
+<link rel="stylesheet" href="assets/company.css?v=20260828">
+<style>
+/* 対応領域・実績台帳（このページ固有） */
+.domain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line)}
+.domain-grid article{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:30px 28px}
+.domain-grid article:first-child{padding-left:0}
+.domain-grid article:last-child{border-right:0;padding-right:0}
+.domain-grid span{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:12px}
+.domain-grid h3{margin:0 0 12px;font-size:18px;line-height:1.5}
+.domain-grid p{margin:0;font-size:13.5px;line-height:2;color:var(--muted)}
+.ledger{margin-top:52px;border-top:2px solid var(--ink)}
+.ledger-row{display:grid;grid-template-columns:150px 1fr 150px;gap:24px;padding:22px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.ledger-head{display:grid;grid-template-columns:150px 1fr 150px;gap:24px;font:11px monospace;letter-spacing:.12em;color:var(--muted);padding:12px 4px;border-bottom:1px solid var(--line)}
+.ledger-row .field{font:12px monospace;color:var(--gold);letter-spacing:.08em}
+.ledger-row .body{font-size:14.5px;line-height:1.9}
+.ledger-row .phase{font:11px monospace;letter-spacing:.1em;color:var(--muted)}
+.ledger-note{margin-top:22px;font-size:12.5px;line-height:2;color:var(--muted);max-width:820px}
+.rd-mini{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:52px;border:1px solid var(--line);padding:34px}
+.rd-mini img{width:100%;height:auto;display:block}
+.rd-mini span{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:12px}
+.rd-mini h3{margin:0 0 14px;font-size:20px;line-height:1.5}
+.rd-mini p{margin:0 0 14px;font-size:13.5px;line-height:2;color:var(--muted)}
+.rd-mini a{font:12px monospace;letter-spacing:.08em;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px}
+.principal-note{margin-top:34px;border-left:2px solid var(--gold);padding:16px 22px;max-width:880px;font-size:13.5px;line-height:2.05;color:var(--muted)}
+.principal-note b{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:8px}
+.policy-link{font:12px monospace;letter-spacing:.08em;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
+@media (max-width:900px){
+  .domain-grid{grid-template-columns:1fr}
+  .domain-grid article,.domain-grid article:first-child,.domain-grid article:last-child{padding:26px 0;border-right:0}
+  .ledger-row{grid-template-columns:1fr;gap:8px}
+  .ledger-head{display:none}
+  .rd-mini{grid-template-columns:1fr;gap:26px}
+}
+</style>
 </head>
 <body class="antialiased">
 <main>
@@ -17,27 +50,27 @@
     <span>東京共同技術株式会社<small>TOKYO KYODO TECHNOLOGY</small></span>
   </a>
   <nav aria-label="メインナビゲーション">
-    <a href="#project-cycle">支援領域</a>
+    <a href="#services">支援領域</a>
+    <a href="#domains">対応領域</a>
     <a href="owners-engineering">発注者側支援</a>
-    <a href="#rd">自社R&amp;D</a>
     <a href="#track-record">実績・体制</a>
     <a href="#company">会社概要</a>
-    <a class="nav-cta" href="mailto:info@tkg-energy.com">お問い合わせ</a>
+    <a class="nav-cta" href="#contact">お問い合わせ</a>
   </nav>
 </header>
 
 <section class="hero drafting-grid" id="top">
   <div class="hero-copy">
-    <p class="eyebrow">BIOMASS CIRCULARITY × TECHNICAL IMPLEMENTATION</p>
-    <h1><span>バイオマス資源循環を、</span><span>社会実装へ。</span></h1>
-    <p class="lead">プラントの試運転・立ち上げ支援と事業化調査で培った実装力を、企業のプロジェクトへ。<br>自社でも、もみ殻由来シリカの研究開発を通じて実装に取り組んでいます。</p>
+    <p class="eyebrow">ENERGY PROJECTS / TECHNICAL ADVISORY</p>
+    <h1><span>エネルギー事業の判断を、</span><span>技術で支える。</span></h1>
+    <p class="lead">プラントの機械設計・建設・試運転に携わってきた技術者が、発注者の側に立って支援します。<br>構想の整理から事業性の評価、設備の立ち上げまで、必要な局面だけでもご相談いただけます。</p>
     <div class="hero-actions">
-      <a class="primary" href="#project-cycle">支援領域を見る</a>
-      <a class="secondary" href="#rd">自社R&amp;Dを見る</a>
+      <a class="primary" href="#services">支援領域を見る</a>
+      <a class="secondary" href="#domains">対応領域を見る</a>
     </div>
   </div>
   <div class="hero-visual">
-    <img src="assets/hero-engineering.png" alt="エンジニアがH&amp;MBやPFDなどの技術図面を確認している線画">
+    <img src="assets/hero-engineering.png" alt="エンジニアがP&amp;IDやPFDなどの技術図面を確認している線画">
     <div class="hero-caption">
       <span>ADVISORY REVIEW</span>
       <p>図面・見積・工程・事業計画を横断し、<br>次の意思決定に必要な論点を可視化します。</p>
@@ -45,10 +78,10 @@
   </div>
 </section>
 
-<section class="section scope" id="project-cycle">
+<section class="section scope" id="services">
   <div class="compact-heading">
-    <div><span>01 / PROJECT CYCLE &amp; SERVICES</span><h2>構想から社会実装まで。</h2></div>
-    <p>各種再エネ・極低温事業等を対象に、構想・検証・事業化・実行を一続きで支援します。必要な局面だけのスポット支援にも対応します。</p>
+    <div><span>01 / PROJECT CYCLE &amp; SERVICES</span><h2>構想から立ち上げまで。</h2></div>
+    <p>エネルギー設備を伴うプロジェクトを対象に、構想・検証・事業化・実行を一続きで支援します。必要な局面だけのスポット支援にも対応します。</p>
   </div>
   <div class="lifecycle">
     <div class="life-line"></div>
@@ -72,46 +105,67 @@
   </div>
   <div class="audience">
     <span>FOR</span>
-    <p>技術系スタートアップ</p><p>新規参入企業</p><p>事業会社</p><p>金融機関・投資ファンド</p><p>自治体</p>
+    <p>事業会社</p><p>新規参入企業</p><p>技術系スタートアップ</p><p>金融機関・投資ファンド</p><p>自治体</p>
   </div>
   <div class="rd-copy" style="margin-top:2rem">
-    <p>当社の土台は、LNG受入基地の設計・試運転で培ったガス系プラントの機械技術です。この技術は、バイオマスプラントにも、LNGや水素などのエネルギー設備にも共通します。EPC発注を控える事業者の皆様には、発注者側の技術支援（オーナーズエンジニアリング）を行っています。</p>
+    <p>EPC発注を控える事業者の皆様には、発注者側に立つ技術支援（オーナーズエンジニアリング）として、設計図書のレビュー、見積の妥当性診断、進行管理、立会検査を個別に提供しています。</p>
     <a href="owners-engineering">オーナーズエンジニアリング（発注者側支援）を見る →</a>
   </div>
 </section>
 
-<section class="section rd-section" id="rd">
-  <div class="rd-visual">
-    <img src="assets/silica-rd.png" alt="もみ殻からシリカへ至る資源循環の技術スケッチ">
-    <span>RICE HUSK TO SILICA / IN-HOUSE R&amp;D</span>
+<section class="section blueprint" id="domains">
+  <div class="compact-heading">
+    <div><span>02 / DOMAINS</span><h2>対応する領域。</h2></div>
+    <p>土台にあるのは、LNG受入基地の設計・試運転で培ったガス系プラントの機械技術です。この技術は、扱う燃料が変わっても共通して使えます。</p>
   </div>
-  <div class="rd-copy">
-    <span>02 / IN-HOUSE R&amp;D</span>
-    <h2>支援するだけでなく、<br>自ら実装に取り組む。</h2>
-    <p>もみ殻由来シリカをテーマに、ラボ検証準備から用途探索・社会実装までの道筋を自社R&amp;Dとして設計しています。</p>
-    <p>現在はラボ検証に着手する前の準備段階です。進捗を過大に見せず、現在地と次の検証項目を公開します。</p>
-    <a href="silica.html">もみ殻由来シリカの現在地を見る →</a>
+  <div class="domain-grid">
+    <article>
+      <span>01 / GAS &amp; CRYOGENICS</span>
+      <h3>ガス・液化ガス設備</h3>
+      <p>LNG受入基地の機器設計、熱調整設備、BOG処理などの設計・試運転に携わってきた領域です。低温設備と回転機を含むプラント全体の成立性を見ます。</p>
+    </article>
+    <article>
+      <span>02 / BIOMASS &amp; BIOGAS</span>
+      <h3>バイオマス・バイオガス</h3>
+      <p>バイオエタノール、バガス発電、有機性廃棄物のバイオガス化などについて、事業化調査と技術評価を行っています。</p>
+    </article>
+    <article>
+      <span>03 / CIRCULARITY &amp; CREDIT</span>
+      <h3>資源循環・カーボンクレジット</h3>
+      <p>バイオ炭の製造とカーボンクレジット組成、農業残渣からの素材化など、副生物を資源として扱う事業の組み立てを支援します。</p>
+    </article>
   </div>
 </section>
 
-<section class="section method blueprint">
+<section class="section" id="track-record">
   <div class="compact-heading">
-    <div><span>03 / ADVISORY FLOW</span><h2>エンジニアと事業者、双方の視点で。</h2></div>
-    <p>技術として成立するか。事業として実行できるか。両方の視点から論点を整理し、意思決定と実行を支えます。</p>
+    <div><span>03 / TRACK RECORD</span><h2>取り組んでいる案件。</h2></div>
+    <p>守秘義務のため、お客様名と数値は掲載していません。進行中の案件は、現在の段階をそのまま記載しています。</p>
   </div>
-  <div class="method-grid">
-    <article><span>1</span><h3>ご相談</h3><p>ヒアリング</p></article>
-    <article><span>2</span><h3>案件概要確認</h3><p>資料レビュー</p></article>
-    <article><span>3</span><h3>初期診断</h3><p>壁打ち</p></article>
-    <article><span>4</span><h3>詳細精査</h3><p>レポート作成</p></article>
-    <article><span>5</span><h3>ご報告</h3><p>方針決定</p></article>
-    <article><span>6</span><h3>継続支援</h3><p>PMO・立ち上げ</p></article>
+  <div class="ledger">
+    <div class="ledger-head">
+      <div>FIELD</div><div>DESCRIPTION</div><div>PHASE</div>
+    </div>
+    <div class="ledger-row">
+      <div class="field">BIOETHANOL</div>
+      <div class="body">離島サトウキビ産地におけるバイオエタノール・バガス発電の事業化調査</div>
+      <div class="phase">FS 段階</div>
+    </div>
+    <div class="ledger-row">
+      <div class="field">BIOCHAR</div>
+      <div class="body">バイオ炭製造とカーボンクレジット組成の事業開発支援</div>
+      <div class="phase">事業開発中</div>
+    </div>
+    <div class="ledger-row">
+      <div class="field">SILICA</div>
+      <div class="body">もみ殻由来シリカの抽出プロセス開発（公設試験研究機関等と連携）</div>
+      <div class="phase">PoC 段階</div>
+    </div>
   </div>
-</section>
+  <p class="ledger-note">上記のほか、エネルギー事業者向けの技術支援を業務委託として受託しています。案件の性質上、内容は公開していません。</p>
 
-<section class="section principal" id="track-record">
-  <div class="compact-heading">
-    <div><span>04 / TRACK RECORD</span><h2>案件に、必要な専門性を。</h2></div>
+  <div class="compact-heading" style="margin-top:96px">
+    <div><span>04 / TEAM</span><h2>案件に、必要な専門性を。</h2></div>
     <p>代表に加え、案件に応じて招集する大手エンジニアリング会社出身のシニアエキスパートネットワーク。案件ごとに必要な専門性を組み合わせます。</p>
   </div>
   <div class="advisor-grid">
@@ -119,7 +173,7 @@
       <div class="advisor-index"><span>01</span><small>代表アドバイザー</small></div>
       <b>EPC / ENGINEERING MANAGEMENT</b>
       <h3>発注・受注の両面から評価</h3>
-      <p>大手エンジニアリング企業で機器設計、リードエンジニア、EMに従事。事業者側ではバイオマス新規燃料開発と商用プラントFSを経験。</p>
+      <p>大手エンジニアリング企業でプラントの機械設計、リードエンジニア、エンジニアリングマネージャーに約13年従事。事業者側では新規燃料開発と商用プラントのFSを経験。</p>
     </article>
     <article>
       <div class="advisor-index"><span>02</span><small>シニアエキスパート</small></div>
@@ -140,11 +194,46 @@
       <p>大手エンジニアリング企業出身。構想・事業性検討から関係者調整、実行計画まで、プロジェクトを前に進める実務を支援。</p>
     </article>
   </div>
+  <div class="principal-note">
+    <b>PRINCIPAL / 代表の経歴</b>
+    プラントの機械設計・建設・試運転に約13年従事。高圧ガス製造保安責任者（甲種）、エネルギー管理士（熱）試験合格、米国FE（Fundamentals of Engineering）試験合格。
+  </div>
+</section>
+
+<section class="section method blueprint">
+  <div class="compact-heading">
+    <div><span>05 / ADVISORY FLOW</span><h2>エンジニアと事業者、双方の視点で。</h2></div>
+    <p>技術として成立するか。事業として実行できるか。両方の視点から論点を整理し、意思決定と実行を支えます。</p>
+  </div>
+  <div class="method-grid">
+    <article><span>1</span><h3>ご相談</h3><p>ヒアリング</p></article>
+    <article><span>2</span><h3>案件概要確認</h3><p>資料レビュー</p></article>
+    <article><span>3</span><h3>初期診断</h3><p>壁打ち</p></article>
+    <article><span>4</span><h3>詳細精査</h3><p>レポート作成</p></article>
+    <article><span>5</span><h3>ご報告</h3><p>方針決定</p></article>
+    <article><span>6</span><h3>継続支援</h3><p>PMO・立ち上げ</p></article>
+  </div>
+</section>
+
+<section class="section" id="rd">
+  <div class="compact-heading">
+    <div><span>06 / IN-HOUSE R&amp;D</span><h2>自ら実装にも取り組む。</h2></div>
+    <p>支援するだけでなく、自社でも研究開発を進めています。進捗を過大に見せず、現在地と次の検証項目を公開します。</p>
+  </div>
+  <div class="rd-mini">
+    <img src="assets/silica-rd.png" alt="もみ殻からシリカへ至る資源循環の技術スケッチ">
+    <div>
+      <span>RICE HUSK TO SILICA</span>
+      <h3>もみ殻由来シリカの抽出プロセス開発</h3>
+      <p>農業残渣であるもみ殻からシリカを取り出し、用途を探索しています。現在はラボ検証に着手する前の準備段階です。</p>
+      <a href="silica.html">もみ殻由来シリカの現在地を見る →</a>
+    </div>
+  </div>
 </section>
 
 <section class="section company blueprint" id="company">
   <div class="section-heading">
-    <span>05 / COMPANY</span><h2>会社概要</h2>
+    <span>07 / COMPANY</span><h2>会社概要</h2>
     <p>少数精鋭のチームで、案件ごとの技術課題に深く向き合います。</p>
   </div>
   <div class="company-grid">
@@ -152,9 +241,10 @@
       <div><dt>社名</dt><dd>東京共同技術株式会社<br><small>Tokyo Kyodo Technology Co., Ltd.</small></dd></div>
       <div><dt>所在地</dt><dd>〒150-0022 東京都渋谷区恵比寿南1-4-2 紀伊國屋ビル4F</dd></div>
       <div><dt>体制</dt><dd>代表＋案件に応じて招集する、大手エンジニアリング会社出身のシニアエキスパートネットワーク</dd></div>
-      <div><dt>事業内容</dt><dd>バイオマス資源循環の社会実装に向けた研究開発、プラントの試運転・立ち上げ支援、事業化調査・技術コンサルティング</dd></div>
+      <div><dt>事業内容</dt><dd>エネルギー設備を伴う事業の技術コンサルティング（構想整理、事業化調査、テクニカルDD、発注者側支援、試運転・立ち上げ支援）、資源循環分野の研究開発</dd></div>
+      <div><dt>情報管理</dt><dd><a class="policy-link" href="security-policy">情報セキュリティ基本方針</a></dd></div>
     </dl>
-    <div class="contact-card">
+    <div class="contact-card" id="contact">
       <img src="assets/logo.png" alt="">
       <span>初回相談 無料</span>
       <h3>技術と事業の論点を、<br>60分で整理します。</h3>
@@ -173,7 +263,7 @@
     <img src="assets/logo.png" alt="">
     <p>東京共同技術株式会社<small>TOKYO KYODO TECHNOLOGY</small></p>
   </div>
-  <p>© TOKYO KYODO TECHNOLOGY CO., LTD.</p>
+  <p>© TOKYO KYODO TECHNOLOGY CO., LTD.　<a href="security-policy" style="color:inherit">情報セキュリティ基本方針</a></p>
   <a href="#top">BACK TO TOP ↑</a>
 </footer>
 </main>

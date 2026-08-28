@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>情報セキュリティ基本方針 | 東京共同技術株式会社</title>
+<meta name="description" content="東京共同技術株式会社の情報セキュリティ基本方針。お客様からお預かりした設計情報・事業計画等の秘密情報の取扱い、生成AI利用時の運用、事故発生時の対応方針を定めています。">
+<link rel="canonical" href="https://www.tkg-energy.com/security-policy">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/company.css?v=20260828">
+<style>
+/* このページ固有の調整（規程・条文型レイアウト）
+   ※ .blueprint（紺地）は本文が読めなくなるため使用しない。紙面に印刷した規程の見え方に寄せる。 */
+.policy-intro{max-width:860px;font-size:15px;line-height:2.1;color:#4a535c;margin-top:8px}
+.policy-doc{max-width:920px;margin-top:56px;background:var(--paper);border:1px solid var(--line);padding:52px 56px}
+.policy-list article{border-top:1px solid var(--line);padding:28px 0;display:grid;grid-template-columns:56px 1fr;gap:22px;align-items:start}
+.policy-list article:first-child{border-top:0;padding-top:0}
+.policy-list .no{font:12px/1.4 monospace;color:var(--gold);letter-spacing:.12em;padding-top:5px}
+.policy-list h3{margin:0 0 10px;font-size:17px;line-height:1.6;color:var(--ink)}
+.policy-list p{margin:0;font-size:14.5px;line-height:2.05;color:#41494f}
+.policy-sign{margin-top:44px;padding-top:26px;border-top:2px solid var(--gold);font-size:14px;line-height:2.1;color:var(--ink)}
+.policy-sign b{display:block;font-size:15px;margin-top:10px}
+.policy-sign small{color:#4a535c}
+.policy-back{margin-top:44px;display:inline-block;font:12px monospace;letter-spacing:.1em;color:#8a6d1f;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px}
+@media (max-width:760px){
+  .policy-doc{padding:32px 22px;margin-top:36px}
+  .policy-list article{grid-template-columns:1fr;gap:8px}
+  .policy-list .no{padding-top:0}
+}
+</style>
+</head>
+<body class="antialiased">
+<main>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="東京共同技術株式会社 トップ">
+    <img src="assets/logo.png" alt="東京共同技術株式会社 ロゴ">
+    <span>東京共同技術株式会社<small>TOKYO KYODO TECHNOLOGY</small></span>
+  </a>
+  <nav aria-label="メインナビゲーション">
+    <a href="index.html#services">支援領域</a>
+    <a href="index.html#domains">対応領域</a>
+    <a href="owners-engineering">発注者側支援</a>
+    <a href="index.html#company">会社概要</a>
+    <a class="nav-cta" href="index.html#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<section class="section" id="top" style="padding-top:120px">
+  <div class="compact-heading">
+    <div><span>INFORMATION SECURITY POLICY</span><h2>情報セキュリティ基本方針</h2></div>
+    <p class="policy-intro">当社は、エネルギー・環境分野の技術支援を業務としており、お客様の事業計画、設計情報、見積条件といった秘密情報をお預かりしています。これらをお預かりできることが事業の前提であると考え、情報セキュリティに関する基本方針を次のとおり定めます。</p>
+  </div>
+
+  <div class="policy-doc">
+  <div class="policy-list">
+    <article>
+      <div class="no">01</div>
+      <div>
+        <h3>管理体制</h3>
+        <p>代表取締役が情報管理責任者を兼ね、情報セキュリティに関する最終的な責任を負います。</p>
+      </div>
+    </article>
+    <article>
+      <div class="no">02</div>
+      <div>
+        <h3>社内規程の整備</h3>
+        <p>情報セキュリティ規程を定め、当社が取扱う情報を重要度に応じて分類したうえで、分類ごとの取扱い方法を決めています。規程は年に1回以上見直し、法令や業務環境の変化に合わせて改めます。</p>
+      </div>
+    </article>
+    <article>
+      <div class="no">03</div>
+      <div>
+        <h3>法令および契約の遵守</h3>
+        <p>個人情報保護法、不正アクセス行為の禁止等に関する法律その他の関係法令を守ります。お客様と締結した秘密保持契約に定める義務についても同様に守ります。</p>
+      </div>
+    </article>
+    <article>
+      <div class="no">04</div>
+      <div>
+        <h3>お預かりした情報の取扱い</h3>
+        <p>お客様から受領した資料は、当社が作成した資料とは分けて保管し、業務上必要な範囲に限って取扱います。生成AIを業務に用いる場合も、お客様の秘密情報を外部のAIサービスに入力しない運用としています。</p>
+      </div>
+    </article>
+    <article>
+      <div class="no">05</div>
+      <div>
+        <h3>技術的な対策</h3>
+        <p>業務で使用する端末にはウイルス対策ソフトを導入し、基本ソフトウェアと業務用ソフトウェアを最新の状態に保ちます。業務で利用するクラウドサービスのうち多要素認証を設定できるものには、これを設定します。業務データは定期的にバックアップを取得します。</p>
+      </div>
+    </article>
+    <article>
+      <div class="no">06</div>
+      <div>
+        <h3>教育</h3>
+        <p>代表取締役を含む全従業員が、年に1回以上、情報セキュリティに関する教育を受けます。</p>
+      </div>
+    </article>
+    <article>
+      <div class="no">07</div>
+      <div>
+        <h3>事故が発生した場合の対応</h3>
+        <p>情報の漏えい、端末の紛失、コンピュータウイルスへの感染などに備え、発見時の初動手順をあらかじめ定めています。事故またはその疑いが生じた場合は、被害の拡大防止を最優先に対応し、影響を受けるお客様および関係機関へ速やかに報告します。</p>
+      </div>
+    </article>
+    <article>
+      <div class="no">08</div>
+      <div>
+        <h3>継続的な改善</h3>
+        <p>自社の対策状況を定期的に点検し、不十分な点を改めます。</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="policy-sign">
+    <small>制定日　2026年8月28日</small>
+    <b>東京共同技術株式会社<br>代表取締役</b>
+  </div>
+  </div>
+
+  <a class="policy-back" href="index.html">← 会社トップへ戻る</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <img src="assets/logo.png" alt="">
+    <p>東京共同技術株式会社<small>TOKYO KYODO TECHNOLOGY</small></p>
+  </div>
+  <p>© TOKYO KYODO TECHNOLOGY CO., LTD.</p>
+  <a href="#top">BACK TO TOP ↑</a>
+</footer>
+</main>
+</body>
+</html>
