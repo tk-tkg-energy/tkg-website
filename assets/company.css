@@ -9,3 +9,11 @@
 /* 2026-08-28 追加: ヘッダーが position:fixed（高さ92px）のため、
    ページ内アンカーで飛んだ先の見出しがヘッダーに隠れる。その分だけ着地位置を下げる。 */
 section[id]{scroll-margin-top:104px}
+
+/* 2026-09-18 追加: 言語切替リンク（英語ページ en.html 追加に伴う）。
+   width<=980px ではナビの通常リンクが隠れるが、言語切替だけは常に表示する。 */
+nav .nav-lang{font:12px monospace;letter-spacing:.1em}
+@media (width<=980px){.site-header nav a.nav-lang{display:inline-block;padding:9px 6px}}
+/* 項目が1つ増えたため、ナビが全表示される幅の下端（981〜1140px）では間隔を詰めて折り返しを防ぐ */
+.site-header nav a{white-space:nowrap}
+@media (width>=981px) and (width<=1140px){.site-header nav{gap:14px}}
