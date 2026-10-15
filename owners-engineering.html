@@ -22,6 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
 <link rel="stylesheet" href="assets/oe-visual.css?v=20261015">
+<link rel="stylesheet" href="assets/bp-hero.css?v=20261015c">
 <link rel="stylesheet" href="assets/site-enhance.css?v=20261015d">
 <script src="assets/nav.js?v=20261015" defer></script>
 <script src="assets/motion.js?v=20261015g" defer></script>
@@ -61,23 +62,35 @@
   </nav>
 </header>
 
-<section class="hero drafting-grid" id="top">
-  <div class="hero-copy">
-    <p class="eyebrow">OWNER'S ENGINEERING / TECHNICAL ADVISORY</p>
+<section class="bp-hero" id="top">
+  <div class="bp-stage" aria-hidden="true">
+    <div class="bp-grid"></div>
+    <img class="bp-layer bp-far" src="assets/hero-bp-far.jpg?v=1" alt="" width="1536" height="1024" decoding="async">
+    <img class="bp-layer bp-near" src="assets/hero-bp-near-oe.jpg?v=1" alt="" width="1536" height="1024" decoding="async">
+    <svg class="bp-flow" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <path class="route" pathLength="1" d="M760 812H1040V700H1260V610H1600"/>
+      <path class="route" pathLength="1" d="M900 900V760H1180V640H1330V520H1600"/>
+      <path class="route" pathLength="1" d="M1020 900V840H1410V730H1600"/>
+      <path class="pulse" pathLength="1" d="M760 812H1040V700H1260V610H1600"/>
+      <path class="pulse p2" pathLength="1" d="M900 900V760H1180V640H1330V520H1600"/>
+      <path class="pulse p3" pathLength="1" d="M1020 900V840H1410V730H1600"/>
+    </svg>
+    <div class="bp-shade"></div>
+  </div>
+  <div class="bp-copy">
+    <p class="bp-eyebrow">OWNER'S ENGINEERING / TECHNICAL ADVISORY</p>
     <h1><span>発注者の側に立つ、</span><span>技術支援。</span></h1>
-    <p class="lead">プラントを「作る側」ではなく「発注する側」に立ち、メーカー・EPCコントラクターと向き合う支援です。<br>専任技術者を雇うほどではないものの、設計書や見積の妥当性を判断できる人が社内にいない。その隙間を埋めます。</p>
-    <div class="hero-actions">
+    <p class="bp-lead">プラントを「作る側」ではなく「発注する側」に立ち、メーカー・EPCコントラクターと向き合う支援です。<br>専任技術者を雇うほどではないものの、設計書や見積の妥当性を判断できる人が社内にいない。その隙間を埋めます。</p>
+    <div class="bp-actions">
       <a class="primary" href="#services">支援メニューを見る</a>
       <a class="secondary" href="index.html">会社トップへ</a>
     </div>
   </div>
-  <div class="hero-visual">
-    <img src="assets/owner-eng-hero-01.png" alt="発注者側の担当者が設計図書と見積を確認しているイラスト">
-    <div class="hero-caption">
-      <span>ADVISORY POSITION</span>
-      <p>発注者側の技術論点を整理し、<br>メーカー・EPCとの折衝を支援します。</p>
-    </div>
+  <div class="bp-caption">
+    <span>ADVISORY POSITION</span>
+    <p>発注者側の技術論点を整理し、メーカー・EPCとの折衝を支援します。</p>
   </div>
+  <a class="bp-scroll" href="#consultations">SCROLL</a>
 </section>
 
 <section class="section scope" id="consultations">

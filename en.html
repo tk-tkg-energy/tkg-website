@@ -25,6 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
 <link rel="stylesheet" href="assets/oe-visual.css?v=20261015">
+<link rel="stylesheet" href="assets/bp-hero.css?v=20261015c">
 <link rel="stylesheet" href="assets/site-enhance.css?v=20261015d">
 <script src="assets/nav.js?v=20261015" defer></script>
 <script src="assets/motion.js?v=20261015g" defer></script>
@@ -51,6 +52,13 @@
 .hero h1 span{display:inline!important}
 .hero h1{font-size:clamp(34px,3.4vw,50px)!important;line-height:1.2!important}
 .lead{line-height:1.85}
+/* 青図面トップ：英語は日本語より長いので、見出しは折り返しを許し字を小さめに */
+.bp-copy{width:min(720px,100%)}
+.bp-copy h1{font-size:clamp(34px,3.7vw,54px);line-height:1.18}
+.bp-copy h1 span{white-space:normal;display:inline}
+.bp-copy{padding-top:44px;padding-bottom:68px}
+.bp-lead{font-size:15px;line-height:1.9;margin:24px 0 30px}
+@media (width<=560px){.bp-copy h1{font-size:clamp(28px,8.4vw,38px)}}
 @media (max-width:900px){.oe-cards,.oe-cards.two{grid-template-columns:1fr}}
 /* Exclude this page from the global .hero-visual override in company.css (see owners-engineering.html) */
 @media (width>=981px){
@@ -76,23 +84,35 @@
   </nav>
 </header>
 
-<section class="hero drafting-grid" id="top">
-  <div class="hero-copy">
-    <p class="eyebrow">OWNER'S ENGINEERING / JAPAN</p>
+<section class="bp-hero" id="top">
+  <div class="bp-stage" aria-hidden="true">
+    <div class="bp-grid"></div>
+    <img class="bp-layer bp-far" src="assets/hero-bp-far.jpg?v=1" alt="" width="1536" height="1024" decoding="async">
+    <img class="bp-layer bp-near" src="assets/hero-bp-near-en.jpg?v=1" alt="" width="1536" height="1024" decoding="async">
+    <svg class="bp-flow" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <path class="route" pathLength="1" d="M760 812H1040V700H1260V610H1600"/>
+      <path class="route" pathLength="1" d="M900 900V760H1180V640H1330V520H1600"/>
+      <path class="route" pathLength="1" d="M1020 900V840H1410V730H1600"/>
+      <path class="pulse" pathLength="1" d="M760 812H1040V700H1260V610H1600"/>
+      <path class="pulse p2" pathLength="1" d="M900 900V760H1180V640H1330V520H1600"/>
+      <path class="pulse p3" pathLength="1" d="M1020 900V840H1410V730H1600"/>
+    </svg>
+    <div class="bp-shade"></div>
+  </div>
+  <div class="bp-copy">
+    <p class="bp-eyebrow">OWNER'S ENGINEERING / JAPAN</p>
     <h1><span>An engineer on your side</span> <span>for energy projects in Japan.</span></h1>
-    <p class="lead">We work for project owners, not for contractors. For companies from outside Japan that are building or investing in energy facilities here, we read the Japanese designs, quotations and regulations and tell you what they mean before you commit. <br>The principal spent 13 years designing, building and commissioning LNG terminal facilities at a major Japanese EPC contractor, and handles every engagement personally.</p>
-    <div class="hero-actions">
+    <p class="bp-lead">We work for project owners, not for contractors. For companies from outside Japan that are building or investing in energy facilities here, we read the Japanese designs, quotations and regulations and tell you what they mean before you commit. <br>The principal spent 13 years designing, building and commissioning LNG terminal facilities at a major Japanese EPC contractor, and handles every engagement personally.</p>
+    <div class="bp-actions">
       <a class="primary" href="#services">See services</a>
       <a class="secondary" href="#contact">Contact</a>
     </div>
   </div>
-  <div class="hero-visual">
-    <img src="assets/owner-eng-hero-01.png" alt="Illustration of an engineer on the owner's side reviewing drawings and a quotation">
-    <div class="hero-caption">
-      <span>OWNER'S SIDE</span>
-      <p>We sort out the technical questions on your side<br>before you negotiate with vendors and contractors.</p>
-    </div>
+  <div class="bp-caption">
+    <span>OWNER'S SIDE</span>
+    <p>We sort out the technical questions on your side before you negotiate with vendors and contractors.</p>
   </div>
+  <a class="bp-scroll" href="#for">SCROLL</a>
 </section>
 
 <section class="section scope" id="for">
