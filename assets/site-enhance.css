@@ -20,3 +20,23 @@
   .site-header.nav-open nav a.nav-lang{font:13px monospace;letter-spacing:.1em}
   .site-header.nav-open nav a.nav-cta{margin-top:18px;padding:15px;border:1px solid var(--ink);text-align:center}
 }
+
+/* 2026-10-15 追加: 画面の動き（motion.js と対） */
+/* リップル */
+.nav-cta,.hero-actions a,.contact-email-row a,.ripple{position:relative;overflow:hidden;isolation:isolate}
+.ripple-ink{position:absolute;border-radius:50%;background:currentColor;opacity:.22;transform:scale(0);pointer-events:none;z-index:-1;animation:tkg-ripple .7s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes tkg-ripple{to{transform:scale(1);opacity:0}}
+.nav-cta,.hero-actions a{transition:background-color .25s,color .25s,border-color .25s}
+nav .nav-cta:hover{background:var(--ink);color:var(--white)}
+
+/* スライドイン（motion.js が .reveal を付けた要素だけ動く） */
+.reveal{opacity:0;transform:translateX(var(--rx,-48px));transition:opacity .7s ease,transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rd,0s)}
+.reveal.is-in{opacity:1;transform:none}
+
+/* ピン止め＋スクラブ（トップ「構想から立ち上げまで」）。--s は各段の立ち上がり 0→1 */
+.cycle-pin.pin-on .cycle-sticky{position:sticky;top:var(--hh,92px);min-height:calc(100vh - var(--hh,92px));display:flex;flex-direction:column;justify-content:center;background:var(--white)}
+/* sticky は重なりの単位になるため、背景色を持たせないと挿絵の乗算合成の相手が無くなり白い四角が出る */
+.cycle-pin.pin-on .stairs{margin-bottom:24px}
+.cycle-pin.pin-on .stair-tread{clip-path:inset(calc((1 - var(--s,1)) * (100% + 40px) - 40px) -4px 0 -4px)}
+/* 親に transform/opacity を付けると乗算合成が親の中に閉じて白い四角が出るため、img 自体を動かす */
+.cycle-pin.pin-on .stair-art img{opacity:var(--s,1);transform:translateY(calc((1 - var(--s,1)) * 36px))}

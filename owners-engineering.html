@@ -21,8 +21,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
-<link rel="stylesheet" href="assets/site-enhance.css?v=20261015">
+<link rel="stylesheet" href="assets/oe-visual.css?v=20261015">
+<link rel="stylesheet" href="assets/site-enhance.css?v=20261015d">
 <script src="assets/nav.js?v=20261015" defer></script>
+<script src="assets/motion.js?v=20261015f" defer></script>
 <style>
 /* このページ固有の調整 */
 .oe-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
@@ -83,10 +85,19 @@
     <div><span>01 / CONSULTATIONS</span><h2>こういうご相談を受けています。</h2></div>
     <p>発注者側で不足する技術判断を、案件に必要な範囲で補います。</p>
   </div>
-  <div class="oe-cards">
-    <article><span>CASE 01</span><h3>設計書・見積の妥当性</h3><p>プラント・設備のEPC発注を控えているが、メーカーの設計書や見積内訳の妥当性を社内で判断できない。</p></article>
-    <article><span>CASE 02</span><h3>スペックの適正</h3><p>提示されたスペックが過剰なのか適正なのか、比べる物差しがない。</p></article>
-    <article><span>CASE 03</span><h3>法規が絡む設計検討</h3><p>ガス事業法・高圧ガス保安法の適用を受ける設備の設計検討で、技術面の論点整理が追いつかない。</p></article>
+  <div class="oe-visual oe-cases">
+    <article>
+      <figure><img src="assets/oe-case-quote.jpg" alt="見積書と設計図面の束を虫眼鏡で読み込む手元" width="960" height="640" loading="lazy" decoding="async"></figure>
+      <span>CASE 01</span><h3>「この見積・設計書、妥当？」</h3><p>メーカーの設計書や見積内訳を、社内で判断できない。</p>
+    </article>
+    <article>
+      <figure><img src="assets/oe-case-spec.jpg" alt="大きすぎるポンプと適正なポンプを天秤で比べる絵" width="960" height="640" loading="lazy" decoding="async"></figure>
+      <span>CASE 02</span><h3>「このスペック、過剰？」</h3><p>過剰か適正か、比べる物差しがない。</p>
+    </article>
+    <article>
+      <figure><img src="assets/oe-case-regulation.jpg" alt="高圧ガス容器の前に積まれた法令集" width="960" height="640" loading="lazy" decoding="async"></figure>
+      <span>CASE 03</span><h3>「法規の論点が追いつかない」</h3><p>ガス事業法・高圧ガス保安法が絡む設計検討。</p>
+    </article>
   </div>
   <p class="oe-note"><b>NOTE</b>許認可手続・保安管理業務そのものは、事業者および有資格者の業務です。当社はその前段の技術検討と、メーカー・EPCとの折衝を支援します。</p>
 </section>
@@ -96,14 +107,20 @@
     <div><span>02 / SERVICES</span><h2>支援メニュー。</h2></div>
     <p>設計・調達・工程・検査を横断し、発注者の意思決定を補佐します。</p>
   </div>
-  <div class="service-breakdown" aria-label="支援メニュー">
-    <article><div><span>01 / EPC PMO</span><h3>EPC進行管理のPMO</h3></div>
-      <ul><li>週次定例で設計・調達・工程の論点を整理</li><li>メーカーとの技術折衝と発注者の意思決定を補佐</li></ul></article>
-    <article><div><span>02 / DOCUMENT REVIEW</span><h3>設計図書のレビュー</h3></div>
-      <ul><li>提出図面・計算書・仕様書・見積内訳書へのコメント</li><li>過剰スペックの指摘と、安全基準を守ったうえでのVE（コスト最適化）提案</li></ul></article>
-    <article><div><span>03 / INSPECTION</span><h3>工場検査・現地立会検査</h3></div>
-      <ul><li>検査要領の確認から立会いまで</li><li>指摘事項のフォロー</li></ul></article>
-  </div>
+  <ol class="oe-visual oe-flow" aria-label="支援メニュー">
+    <li>
+      <figure><img src="assets/oe-svc-pmo.jpg" alt="週次定例の机上（工程表を映したノートPCと図面）" width="960" height="640" loading="lazy" decoding="async"></figure>
+      <div class="oe-flow-body"><i class="oe-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M8 13h6M8 16h9"/></svg></i><span>01 / EPC PMO</span><h3>EPC進行管理のPMO</h3><p>週次定例で論点を整理し、意思決定を補佐。</p></div>
+    </li>
+    <li>
+      <figure><img src="assets/oe-svc-review.jpg" alt="書き込みの入った配管図と三角定規・電卓" width="960" height="640" loading="lazy" decoding="async"></figure>
+      <div class="oe-flow-body"><i class="oe-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></svg></i><span>02 / DOCUMENT REVIEW</span><h3>設計図書のレビュー</h3><p>図面・計算書・見積にコメントし、VEを提案。</p></div>
+    </li>
+    <li>
+      <figure><img src="assets/oe-svc-inspection.jpg" alt="工場内の圧力容器とクリップボードを持つ手" width="960" height="640" loading="lazy" decoding="async"></figure>
+      <div class="oe-flow-body"><i class="oe-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><path d="M12 12l3.5-3.5M12 4.5v1.5M19.5 12H18M6 12H4.5"/></svg></i><span>03 / INSPECTION</span><h3>工場検査・立会検査</h3><p>検査要領の確認から立会い、指摘のフォローまで。</p></div>
+    </li>
+  </ol>
 </section>
 
 <section class="section method" id="engagement">
@@ -111,11 +128,22 @@
     <div><span>03 / ENGAGEMENT</span><h2>契約と関わり方。</h2></div>
     <p>常駐ではなく、週次定例と図書レビューを軸に、必要な場面で関与します。</p>
   </div>
-  <div class="oe-cards two">
-    <article><span>TYPE A / ADVISORY</span><h3>顧問型</h3><p>月間上限時間を定めた準委任。週次のオンライン定例と、設計図書の非同期レビューを組み合わせます。</p></article>
-    <article><span>TYPE B / SPOT</span><h3>スポット型</h3><p>設計図書レビューや検査立会いの単発のご依頼。検査・キックオフなど必要な場面のみ現地に伺います。</p></article>
+  <div class="oe-visual oe-types">
+    <article>
+      <figure><img src="assets/oe-type-advisory.jpg" alt="毎週同じ曜日に印の付いたカレンダーとビデオ会議中のノートPC" width="960" height="640" loading="lazy" decoding="async"></figure>
+      <span>TYPE A / ADVISORY</span><h3>顧問型</h3><p>月間上限時間の準委任。週次のオンライン定例と、図書の非同期レビュー。</p>
+    </article>
+    <article>
+      <figure><img src="assets/oe-type-spot.jpg" alt="現地設備の前のヘルメットと工具バッグ、地図に立てた一本のピン" width="960" height="640" loading="lazy" decoding="async"></figure>
+      <span>TYPE B / SPOT</span><h3>スポット型</h3><p>図書レビューや検査立会いを単発で。現地へは必要な場面のみ伺います。</p>
+    </article>
   </div>
-  <p class="oe-note"><b>SCOPE</b>常駐・フルタイムのご依頼はお受けしていません。業務は代表が全件直接担当し、再委託はしません。電気設計の細部など専門外の領域は、その分野の外部専門家を起用し、当社はチェックする立場に回ります。準委任契約を基本とし、秘密保持契約を締結のうえ着手します。</p>
+  <ul class="oe-chips" aria-label="関わり方の前提">
+    <li><i class="oe-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8M12 17v4"/></svg></i><b>常駐なし</b><small>定例・レビューはオンライン</small></li>
+    <li><i class="oe-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></i><b>代表が全件担当</b><small>再委託はしません</small></li>
+    <li><i class="oe-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.3 11l7.4-3.8M8.3 13l7.4 3.8"/></svg></i><b>専門外は外部専門家</b><small>当社はチェックする立場</small></li>
+    <li><i class="oe-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></i><b>準委任＋秘密保持契約</b><small>締結のうえ着手</small></li>
+  </ul>
 </section>
 
 <section class="section rd-section" id="why">

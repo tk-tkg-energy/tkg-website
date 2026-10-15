@@ -1,0 +1,46 @@
+/* 2026-10-15 追加: 発注者側支援ページ（日本語・英語）の絵主体レイアウト。挿絵は Codex 作・白背景を乗算合成 */
+.oe-visual{list-style:none;padding:0;margin:44px 0 0;display:grid;gap:36px}
+.oe-visual figure{margin:0 0 18px;aspect-ratio:3/2;overflow:hidden}
+.oe-visual img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;display:block;transition:transform .6s ease}
+.oe-visual article:hover img,.oe-visual li:hover img{transform:scale(1.04)}
+.oe-visual span{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:8px}
+.oe-visual h3{margin:0 0 6px;font:500 20px/1.5 var(--serif,serif)}
+.oe-visual p{margin:0;font-size:13.5px;line-height:1.8;color:var(--muted)}
+.oe-cases{grid-template-columns:repeat(3,minmax(0,1fr))}
+.oe-cases article,.oe-types article{border-top:2px solid var(--ink);padding-top:18px}
+/* 支援メニュー：紺地の上に紙のカードを並べ、矢印でつなぐ */
+.oe-flow{grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+.oe-flow li{position:relative;background:var(--paper);color:var(--ink)}
+.oe-flow li:not(:last-child)::after{content:"";position:absolute;top:33%;right:-34px;width:18px;height:18px;border-top:1.5px solid var(--gold);border-right:1.5px solid var(--gold);transform:rotate(45deg)}
+.oe-flow figure{margin:0}
+.oe-flow-body{position:relative;padding:32px 22px 24px;border-top:1px solid var(--line)}
+.oe-flow-body .oe-ico{position:absolute;top:-24px;left:20px}
+.oe-ico{width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;background:var(--white);display:inline-grid;place-items:center;flex:none}
+.oe-ico svg{width:22px;height:22px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+/* 関わり方：2枚の絵＋前提のアイコン列 */
+.oe-types{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.oe-chips{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.oe-chips li{display:grid;grid-template-columns:46px 1fr;column-gap:14px;align-items:center;padding:22px 16px 22px 0}
+.oe-chips .oe-ico{grid-row:span 2}
+.oe-chips b{font-size:14.5px;font-weight:600;line-height:1.5}
+.oe-chips small{grid-column:2;font-size:12px;color:var(--muted);line-height:1.6}
+@media (max-width:900px){
+  .oe-cases,.oe-flow,.oe-types{grid-template-columns:1fr;gap:44px}
+  .oe-flow li:not(:last-child)::after{top:auto;right:auto;left:50%;bottom:-32px;transform:translateX(-50%) rotate(135deg)}
+  .oe-chips{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){.oe-chips{grid-template-columns:1fr}}
+
+/* 英語ページ用：4枚の流れ、しないことの一覧（打ち消し線つきアイコン） */
+.oe-flow.four{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px}
+.oe-flow.four li:not(:last-child)::after{right:-30px}
+.oe-no{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.oe-no li{display:grid;grid-template-columns:52px 1fr;column-gap:16px;align-items:start;padding:26px 22px 26px 0;border-bottom:1px solid var(--line)}
+.oe-no .oe-ico{position:relative;grid-row:span 2;width:52px;height:52px;border-color:var(--line)}
+.oe-no .oe-ico svg{stroke:var(--muted)}
+.oe-no .oe-ico::after{content:"";position:absolute;left:8px;right:8px;top:50%;border-top:1.5px solid var(--gold);transform:rotate(-45deg)}
+.oe-no b{font-size:15px;font-weight:600;line-height:1.5}
+.oe-no small{grid-column:2;font-size:12.5px;color:var(--muted);line-height:1.7;margin-top:4px}
+@media (max-width:1100px){.oe-flow.four{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}.oe-flow.four li:nth-child(2)::after{display:none}}
+@media (max-width:900px){.oe-flow.four{grid-template-columns:1fr}.oe-flow.four li:nth-child(2)::after{display:block}.oe-no{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.oe-no{grid-template-columns:1fr}}
