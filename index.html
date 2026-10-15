@@ -5,12 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>東京共同技術株式会社 | エネルギー事業の技術支援</title>
 <meta name="description" content="ガス・液化ガス設備、バイオマス・バイオガス、資源循環を対象に、構想・事業性評価から発注者側支援、プラントの試運転・立ち上げまでを支援する技術コンサルティング会社です。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="東京共同技術株式会社">
+<meta property="og:title" content="東京共同技術株式会社 | エネルギー事業の技術支援">
+<meta property="og:description" content="ガス・液化ガス設備、バイオマス・バイオガス、資源循環を対象に、構想・事業性評価から発注者側支援、プラントの試運転・立ち上げまでを支援する技術コンサルティング会社です。">
+<meta property="og:url" content="https://www.tkg-energy.com/">
+<meta property="og:image" content="https://www.tkg-energy.com/assets/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.tkg-energy.com/">
 <link rel="alternate" hreflang="ja" href="https://www.tkg-energy.com/">
 <link rel="alternate" hreflang="en" href="https://www.tkg-energy.com/en">
 <link rel="alternate" hreflang="x-default" href="https://www.tkg-energy.com/">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="assets/company.css?v=20260918">
+<link rel="stylesheet" href="assets/company.css?v=20261015">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/site-enhance.css?v=20261015">
+<script src="assets/nav.js?v=20261015" defer></script>
 <style>
 /* 対応領域・実績台帳（このページ固有） */
 .domain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line)}
@@ -20,6 +35,14 @@
 .domain-grid span{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:12px}
 .domain-grid h3{margin:0 0 12px;font-size:18px;line-height:1.5}
 .domain-grid p{margin:0;font-size:13.5px;line-height:2;color:var(--muted)}
+/* 紺地（.blueprint）の上では --muted が読めない（コントラスト2.4:1）ため、見出し横の説明文と同じ色にそろえる */
+.blueprint .domain-grid{border-top-color:#ffffff33}
+.blueprint .domain-grid article{border-color:#ffffff33}
+.blueprint .domain-grid p{color:#c0cad2}
+/* 2026-10-15 追加: 対応領域の図版（Codex作の線画） */
+.domain-fig{margin:0 0 24px;aspect-ratio:3/2;overflow:hidden;background:var(--paper);border:1px solid #ffffff33}
+.domain-fig img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.domain-grid article:hover .domain-fig img{transform:scale(1.03)}
 .ledger{margin-top:52px;border-top:2px solid var(--ink)}
 .ledger-row{display:grid;grid-template-columns:150px 1fr 150px;gap:24px;padding:22px 4px;border-bottom:1px solid var(--line);align-items:baseline}
 .ledger-head{display:grid;grid-template-columns:150px 1fr 150px;gap:24px;font:11px monospace;letter-spacing:.12em;color:var(--muted);padding:12px 4px;border-bottom:1px solid var(--line)}
@@ -124,16 +147,19 @@
   </div>
   <div class="domain-grid">
     <article>
+      <figure class="domain-fig"><img src="assets/domain-gas.jpg" alt="ガス・液化ガス設備の線画（低温貯槽・配管ラック・気化器）" width="960" height="640" loading="lazy" decoding="async"></figure>
       <span>01 / GAS &amp; CRYOGENICS</span>
       <h3>ガス・液化ガス設備</h3>
       <p>LNG受入基地の機器設計、熱調整設備、BOG処理などの設計・試運転に携わってきた領域です。低温設備と回転機を含むプラント全体の成立性を見ます。</p>
     </article>
     <article>
+      <figure class="domain-fig"><img src="assets/domain-biomass.jpg" alt="バイオマス・バイオガスの線画（サトウキビとバガス、発酵槽）" width="960" height="640" loading="lazy" decoding="async"></figure>
       <span>02 / BIOMASS &amp; BIOGAS</span>
       <h3>バイオマス・バイオガス</h3>
       <p>バイオエタノール、バガス発電、有機性廃棄物のバイオガス化などについて、事業化調査と技術評価を行っています。</p>
     </article>
     <article>
+      <figure class="domain-fig"><img src="assets/domain-circular.jpg" alt="資源循環の線画（もみ殻・木くず、炭化炉、土に戻るバイオ炭）" width="960" height="640" loading="lazy" decoding="async"></figure>
       <span>03 / CIRCULARITY &amp; CREDIT</span>
       <h3>資源循環・カーボンクレジット</h3>
       <p>バイオ炭の製造とカーボンクレジット組成、農業残渣からの素材化など、副生物を資源として扱う事業の組み立てを支援します。</p>

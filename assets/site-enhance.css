@@ -1,0 +1,22 @@
+/* 2026-10-15 追加: 全ページ共通の補修（company.css / silica.css の後に読み込む）。
+   minify済みCSSを直接いじらずに済むよう、追加分はここへ集める。 */
+
+/* 見出しの明朝体。company.css / silica.css の "serif" は var(--serif,serif) に置換済み。
+   端末ごとに字形が変わらないよう Web フォント（Shippori Mincho）を先頭にする。 */
+:root{--serif:"Shippori Mincho","Yu Mincho","YuMincho","Hiragino Mincho ProN",serif}
+
+/* スマホ幅のメニュー。width<=980px では nav の通常リンクが隠れるため、
+   開閉ボタン（nav.js が挿入）でドロップダウン表示する。 */
+.nav-toggle{display:none}
+@media (width<=980px){
+  .site-header nav{margin-left:auto}
+  .nav-toggle{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;flex:none;width:44px;height:44px;margin-left:10px;padding:0 12px;border:1px solid var(--line);background:transparent;cursor:pointer}
+  .nav-toggle span{display:block;height:1.5px;background:var(--ink);transition:transform .2s,opacity .2s}
+  .site-header.nav-open .nav-toggle span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .site-header.nav-open .nav-toggle span:nth-child(2){opacity:0}
+  .site-header.nav-open .nav-toggle span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .site-header.nav-open nav{position:absolute;top:100%;left:0;right:0;margin:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:6px 24px 26px;background:#f5f1e8;border-bottom:1px solid var(--line);box-shadow:0 18px 32px #1c253018;max-height:calc(100vh - 76px);overflow-y:auto}
+  .site-header.nav-open nav a{display:block!important;padding:16px 2px;border-bottom:1px solid var(--line);font-size:15px;letter-spacing:.05em}
+  .site-header.nav-open nav a.nav-lang{font:13px monospace;letter-spacing:.1em}
+  .site-header.nav-open nav a.nav-cta{margin-top:18px;padding:15px;border:1px solid var(--ink);text-align:center}
+}
