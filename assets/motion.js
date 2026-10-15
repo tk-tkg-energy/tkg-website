@@ -7,7 +7,7 @@
   function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
 
   // 1. ボタンのリップル（押した位置から波紋が広がる）
-  var RIPPLE = '.nav-cta, .hero-actions a, .contact-email-row a, .ripple';
+  var RIPPLE = '.nav-cta, .hero-actions a, .bp-actions a, .contact-email-row a, .ripple';
   document.addEventListener('pointerdown', function (e) {
     var b = e.target.closest(RIPPLE);
     if (!b || reduce) return;
@@ -75,6 +75,31 @@
       el.classList.add('reveal');
       io.observe(el);
     });
+  }
+
+  // 5. トップの青図面：スクロールとマウスで奥行き（遠景は少し、近景は大きく動かす）
+  var bp = document.querySelector('.bp-hero');
+  if (bp) {
+    var far = bp.querySelector('.bp-far'), near = bp.querySelector('.bp-near');
+    var raf2 = false;
+    window.addEventListener('scroll', function () {
+      if (raf2) return;
+      raf2 = true;
+      requestAnimationFrame(function () {
+        raf2 = false;
+        var y = Math.min(window.scrollY, bp.offsetHeight);
+        far.style.setProperty('--py-far', (y * 0.12).toFixed(1));
+        near.style.setProperty('--py-near', (y * 0.3).toFixed(1));
+      });
+    }, { passive: true });
+    if (window.matchMedia('(hover: hover)').matches) {
+      bp.addEventListener('pointermove', function (e) {
+        var r = bp.getBoundingClientRect();
+        var dx = (e.clientX - r.left) / r.width - 0.5;
+        far.style.setProperty('--mx-far', (-dx * 10).toFixed(1));
+        near.style.setProperty('--mx-near', (-dx * 26).toFixed(1));
+      });
+    }
   }
 
   // 4. 「構想から立ち上げまで」のピン止め＋スクラブ（スクロール量に合わせて階段が1段ずつ立ち上がる）

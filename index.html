@@ -24,9 +24,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/bp-hero.css?v=20261015c">
 <link rel="stylesheet" href="assets/site-enhance.css?v=20261015d">
 <script src="assets/nav.js?v=20261015" defer></script>
-<script src="assets/motion.js?v=20261015f" defer></script>
+<script src="assets/motion.js?v=20261015g" defer></script>
 <style>
 /* 対応領域・実績台帳（このページ固有） */
 /* 3列の内容幅をそろえるため、左右の余白は padding ではなく column-gap で取り、区切り線は ::after で描く
@@ -120,23 +121,35 @@
   </nav>
 </header>
 
-<section class="hero drafting-grid" id="top">
-  <div class="hero-copy">
-    <p class="eyebrow">ENERGY PROJECTS / TECHNICAL ADVISORY</p>
+<section class="bp-hero" id="top">
+  <div class="bp-stage" aria-hidden="true">
+    <div class="bp-grid"></div>
+    <img class="bp-layer bp-far" src="assets/hero-bp-far.jpg" alt="" width="1536" height="1024" decoding="async">
+    <img class="bp-layer bp-near" src="assets/hero-bp-near.jpg" alt="" width="1536" height="1024" decoding="async">
+    <svg class="bp-flow" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <path class="route" pathLength="1" d="M760 812H1040V700H1260V610H1600"/>
+      <path class="route" pathLength="1" d="M900 900V760H1180V640H1330V520H1600"/>
+      <path class="route" pathLength="1" d="M1020 900V840H1410V730H1600"/>
+      <path class="pulse" pathLength="1" d="M760 812H1040V700H1260V610H1600"/>
+      <path class="pulse p2" pathLength="1" d="M900 900V760H1180V640H1330V520H1600"/>
+      <path class="pulse p3" pathLength="1" d="M1020 900V840H1410V730H1600"/>
+    </svg>
+    <div class="bp-shade"></div>
+  </div>
+  <div class="bp-copy">
+    <p class="bp-eyebrow">ENERGY PROJECTS / TECHNICAL ADVISORY</p>
     <h1><span>エネルギー事業の判断を、</span><span>技術で支える。</span></h1>
-    <p class="lead">プラントの機械設計・建設・試運転に携わってきた技術者が、発注者の側に立って支援します。<br>構想の整理から事業性の評価、設備の立ち上げまで、必要な局面だけでもご相談いただけます。</p>
-    <div class="hero-actions">
+    <p class="bp-lead">プラントの機械設計・建設・試運転に携わってきた技術者が、発注者の側に立って支援します。<br>構想の整理から事業性の評価、設備の立ち上げまで、必要な局面だけでもご相談いただけます。</p>
+    <div class="bp-actions">
       <a class="primary" href="#services">支援領域を見る</a>
       <a class="secondary" href="#domains">対応領域を見る</a>
     </div>
   </div>
-  <div class="hero-visual">
-    <img src="assets/hero-engineering.png" alt="エンジニアがP&amp;IDやPFDなどの技術図面を確認している線画">
-    <div class="hero-caption">
-      <span>ADVISORY REVIEW</span>
-      <p>図面・見積・工程・事業計画を横断し、<br>次の意思決定に必要な論点を可視化します。</p>
-    </div>
+  <div class="bp-caption">
+    <span>ADVISORY REVIEW</span>
+    <p>図面・見積・工程・事業計画を横断し、次の意思決定に必要な論点を可視化します。</p>
   </div>
+  <a class="bp-scroll" href="#services">SCROLL</a>
 </section>
 
 <section class="section scope" id="services">

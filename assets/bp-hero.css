@@ -1,0 +1,70 @@
+/* 2026-10-15 追加: トップの「動く青図面」。紺の地に白い線画（Codex作・黒地の画像を screen 合成）を
+   2枚重ね、別々の速さでゆっくり漂わせる。company.css の .hero 系ルールと衝突しないよう bp- 接頭辞で独立させる。 */
+.bp-hero{position:relative;min-height:max(560px,calc(100svh - 92px));display:flex;align-items:center;overflow:hidden;color:#f4f2eb;background:#0c2440;border-bottom:1px solid #0c2440}
+.bp-stage{position:absolute;inset:0;isolation:isolate;background:radial-gradient(120% 90% at 78% 40%,#16406a 0%,#0f2e50 45%,#0a1f38 100%)}
+.bp-grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff0d 1px,#0000 1px),linear-gradient(90deg,#ffffff0d 1px,#0000 1px),linear-gradient(#ffffff06 1px,#0000 1px),linear-gradient(90deg,#ffffff06 1px,#0000 1px);background-size:160px 160px,160px 160px,32px 32px,32px 32px}
+.bp-layer{position:absolute;inset:-6%;width:112%;height:112%;object-fit:cover;object-position:70% 50%;mix-blend-mode:screen;pointer-events:none;will-change:transform}
+.bp-far{opacity:.42;animation:bp-drift-far 46s ease-in-out infinite alternate;translate:calc(var(--mx-far,0) * 1px) calc(var(--py-far,0) * 1px);transition:translate .6s ease-out}
+/* 近景は本文の後ろにかからないよう右へずらして置く */
+.bp-near{inset:auto;left:16%;top:-4%;width:100%;height:112%;opacity:.78;animation:bp-drift-near 32s ease-in-out infinite alternate,bp-scan 2.6s cubic-bezier(.6,.05,.2,1) .2s both;translate:calc(var(--mx-near,0) * 1px) calc(var(--py-near,0) * 1px);transition:translate .6s ease-out}
+@keyframes bp-drift-far{from{transform:scale(1.02) translate3d(1.5%,0,0)}to{transform:scale(1.1) translate3d(-2%,-1%,0)}}
+@keyframes bp-drift-near{from{transform:scale(1.08) translate3d(-1%,1%,0)}to{transform:scale(1.0) translate3d(2%,-.5%,0)}}
+/* 読み込み時、図面がスキャンされるように左から現れる */
+@keyframes bp-scan{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
+.bp-flow{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:screen}
+.bp-flow path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.bp-flow .route{stroke:#b4933e;stroke-width:1.4;opacity:.55;stroke-dasharray:1;stroke-dashoffset:1;animation:bp-draw 3.2s ease-out .9s forwards}
+.bp-flow .pulse{stroke:#e2c67a;stroke-width:2.2;opacity:.85;stroke-dasharray:.035 .965;stroke-dashoffset:1;animation:bp-pulse 6s linear 3.6s infinite}
+.bp-flow .pulse.p2{animation-delay:5.1s;animation-duration:7.5s}
+.bp-flow .pulse.p3{animation-delay:4.2s;animation-duration:5.4s}
+@keyframes bp-draw{to{stroke-dashoffset:0}}
+@keyframes bp-pulse{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.bp-shade{position:absolute;inset:0;background:linear-gradient(90deg,#0a1f38f5 0%,#0a1f38e6 34%,#0a1f3880 56%,#0a1f3800 78%),linear-gradient(0deg,#0a1f38b3 0%,#0a1f3800 30%)}
+/* コピー */
+.bp-copy{position:relative;z-index:2;width:min(640px,100%);padding:56px 0 72px 6vw}
+.bp-eyebrow{margin:0 0 30px;padding-bottom:14px;border-bottom:1px solid #ffffff2e;font:12px/1.4 monospace;letter-spacing:.14em;color:#d8bb6a;max-width:420px}
+.bp-copy h1{margin:0;font:500 clamp(40px,4.6vw,68px)/1.25 var(--serif,serif);letter-spacing:-.01em;color:#fff}
+.bp-copy h1 span{display:block;white-space:nowrap}
+.bp-lead{margin:30px 0 36px;font-size:16px;line-height:2.05;color:#d3dbe3;max-width:540px}
+.bp-actions{display:flex;gap:12px;flex-wrap:wrap}
+.bp-actions a{padding:15px 22px;font-size:14px;border:1px solid #ffffff8c;color:#fff;transition:background-color .25s,color .25s,border-color .25s}
+.bp-actions a:hover{background:#ffffff14;border-color:#fff}
+.bp-actions .primary{background:#f4f2eb;color:#112f4c;border-color:#f4f2eb}
+.bp-actions .primary:hover{background:#fff;color:#112f4c}
+/* 入場（文字が下からふわっと） */
+.bp-copy>*{animation:bp-rise .9s cubic-bezier(.2,.7,.2,1) both}
+.bp-copy .bp-eyebrow{animation-delay:.25s}
+.bp-copy h1 span:nth-child(1){animation:bp-rise .9s cubic-bezier(.2,.7,.2,1) .45s both}
+.bp-copy h1 span:nth-child(2){animation:bp-rise .9s cubic-bezier(.2,.7,.2,1) .6s both}
+.bp-copy h1{animation:none}
+.bp-copy .bp-lead{animation-delay:.85s}
+.bp-copy .bp-actions{animation-delay:1s}
+@keyframes bp-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+/* 右下の小窓とスクロール案内 */
+.bp-caption{position:absolute;z-index:2;right:4vw;bottom:40px;max-width:360px;padding:16px 20px;border-left:2px solid #b4933e;background:#0a1f38b8;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:bp-rise .9s cubic-bezier(.2,.7,.2,1) 1.3s both}
+.bp-caption span{display:block;font:11px monospace;letter-spacing:.12em;color:#d8bb6a;margin-bottom:6px}
+.bp-caption p{margin:0;font-size:13px;line-height:1.85;color:#d3dbe3}
+.bp-scroll{position:absolute;z-index:2;left:6vw;bottom:28px;font:10px monospace;letter-spacing:.24em;color:#ffffffa6;padding-left:22px}
+.bp-scroll::before{content:"";position:absolute;left:0;top:-2px;width:1px;height:16px;background:#ffffffa6;animation:bp-tick 2.2s ease-in-out infinite}
+@keyframes bp-tick{0%,100%{transform:translateY(-4px);opacity:.2}50%{transform:translateY(4px);opacity:1}}
+@media (width<=980px){
+  .bp-hero{min-height:max(560px,calc(100svh - 76px));align-items:flex-end}
+  .bp-layer{object-position:68% 40%}
+  .bp-near{left:-6%;width:112%}
+  .bp-shade{background:linear-gradient(0deg,#0a1f38f5 0%,#0a1f38d9 45%,#0a1f3833 80%)}
+  .bp-copy{padding:120px 24px 64px}
+  .bp-caption{display:none}
+  .bp-scroll{display:none}
+}
+@media (width<=560px){
+  /* 1行目（12字）が途中で折れないよう、画面幅に合わせて字の大きさを決める */
+  .bp-copy h1{font-size:clamp(24px,7.1vw,40px);line-height:1.45}
+  .bp-lead{font-size:15px;line-height:1.9}
+  .bp-lead br{display:none}
+  .bp-actions{flex-direction:column}
+  .bp-actions a{text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  .bp-hero *,.bp-hero *::before{animation:none!important}
+  .bp-flow .route{stroke-dashoffset:0}
+}
