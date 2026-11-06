@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="assets/site-enhance.css?v=20261015d">
 <script src="assets/nav.js?v=20261015" defer></script>
 <script src="assets/motion.js?v=20261015g" defer></script>
-<link rel="stylesheet" href="assets/service.css?v=20261106b">
+<link rel="stylesheet" href="assets/service.css?v=20261106c">
 <link rel="stylesheet" href="assets/pilot.css?v=20261106b">
 <link rel="stylesheet" href="assets/incineration.css?v=20261106">
 </head>
@@ -36,10 +36,10 @@
     <span>東京共同技術株式会社<small>TOKYO KYODO TECHNOLOGY</small></span>
   </a>
   <nav aria-label="メインナビゲーション">
+    <a href="#promise">当社の約束</a>
     <a href="#map">工程マップ</a>
     <a href="#report">レポート見本</a>
     <a href="#check">チェックシート</a>
-    <a href="#data">データと費用</a>
     <a href="#flow">ご相談の流れ</a>
     <a href="index.html">会社トップ</a>
     <a class="nav-cta" href="#contact">お問い合わせ</a>
@@ -89,9 +89,94 @@
   </div>
 </section>
 
+<section class="section scope" id="promise">
+  <div class="compact-heading">
+    <div><span>02 / WHY TKG</span><h2>当社にできないことと、<span class="nw">だからお約束すること。</span></h2></div>
+    <p>できないことを先に書き、そのうえでお約束することを並べました。</p>
+  </div>
+  <ol class="svc-promise">
+    <li>
+      <div>
+        <span class="pr-no">PROMISE</span>
+        <p class="pr-fact">焼却炉を毎日運転した経験はありません。</p>
+        <span class="pr-so">だから</span>
+        <h3>運転記録と設計の計算で、<br>一つずつ確かめ直します。</h3>
+        <p class="pr-body">現場の勘を「経験上そうだ」で受け取らず、燃焼空気量・排ガス量・熱の収支を計算し、運転記録と突き合わせます。計算と記録が合わないところは、そこから調べます。</p>
+      </div>
+      <figure class="svc-win">
+        <figcaption>運転記録と計算値の突き合わせ<em>見本</em></figcaption>
+        <div class="wb">
+          <svg viewBox="0 0 320 150" aria-hidden="true">
+            <rect class="band" x="34" y="34" width="276" height="44"/>
+            <path class="ax" d="M34 10V128H312"/>
+            <path class="ln" d="M34 70L48 62 62 66 76 54 90 58 104 50 118 60 132 56 146 64 160 52 174 48 188 58 202 46 216 40 230 30 244 24 258 34 272 22 286 28 300 20 310 24"/>
+            <path class="ln2" d="M34 64C120 58 200 44 310 34"/>
+            <text x="38" y="30">計算で求めた余裕の範囲</text>
+            <text x="230" y="16">記録が範囲を外れる</text>
+            <text x="38" y="144">時刻 →</text>
+            <text x="200" y="144">— 記録　- - 計算値</text>
+          </svg>
+        </div>
+      </figure>
+    </li>
+    <li>
+      <div>
+        <span class="pr-no">PROMISE</span>
+        <p class="pr-fact">炉やファンのメーカーではなく、売る機器を持っていません。</p>
+        <span class="pr-so">だから</span>
+        <h3>どの設備が先に限界に来るかを、<br>売り物と切り離して申し上げます。</h3>
+        <p class="pr-body">炉を大きくしても処理量が増えない、という結論になることもあります。手を入れる場所と順番を、設備ごとの負荷で示します。</p>
+      </div>
+      <figure class="svc-win">
+        <figcaption>設備ごとの負荷<em>見本・仮の数値</em></figcaption>
+        <div class="wb"><img src="assets/inc-report-bars.svg?v=20261106" alt="" loading="lazy"></div>
+      </figure>
+    </li>
+    <li>
+      <div>
+        <span class="pr-no">PROMISE</span>
+        <p class="pr-fact">経験だけで「たぶん大丈夫」と言える立場ではありません。</p>
+        <span class="pr-so">だから</span>
+        <h3>どこまでなら大丈夫かを、<br>数字の幅で書きます。</h3>
+        <p class="pr-body">判断表には、場面ごとに見る数値と操作に加えて、いまの値と上限を並べます。若手が判断に迷ったとき、余裕がどれだけ残っているかを表で確かめられます。</p>
+      </div>
+      <figure class="svc-win">
+        <figcaption>判断表<em>見本</em></figcaption>
+        <div class="wb">
+          <table>
+            <tr><th>設備</th><th>見る数値</th><th>いま</th><th>上限</th><th>余裕</th></tr>
+            <tr><td>誘引ファン</td><td>風量</td><td>○○</td><td>○○</td><td class="hl">小</td></tr>
+            <tr><td>バグフィルタ</td><td>差圧</td><td>○○</td><td>○○</td><td>中</td></tr>
+            <tr><td>炉</td><td>熱負荷</td><td>○○</td><td>○○</td><td>中</td></tr>
+            <tr><td>ボイラ</td><td>出口温度</td><td>○○</td><td>○○</td><td>大</td></tr>
+          </table>
+        </div>
+      </figure>
+    </li>
+    <li>
+      <div>
+        <span class="pr-no">PROMISE</span>
+        <p class="pr-fact">炉を運転する側ではなく、大手エンジニアリング会社でプラントを設計する側に約13年いました。</p>
+        <span class="pr-so">だから</span>
+        <h3>管理値がなぜその値なのかを、<br>設計の考え方までさかのぼります。</h3>
+        <p class="pr-body">運転ルールごとに、設計上の理由と限界の数字を「なぜ」帳に残します。理由の分からないルールは、癖として見直す候補にします。</p>
+      </div>
+      <figure class="svc-win">
+        <figcaption>「なぜ」帳<em>見本</em></figcaption>
+        <div class="wb why">
+          <div><b>ルール</b><span>炉出口の酸素濃度を ○○％ 以上に保つ</span></div>
+          <div><b>理由</b><span>空気が足りないと一酸化炭素が出るため。設計時の空気比から求めた値</span></div>
+          <div><b>限界</b><span>○○％ を下回ると、計算上は燃え残りが増える</span></div>
+          <div><b>見直し</b><span>ごみ質が設計時から変わっていれば、値を見直す</span></div>
+        </div>
+      </figure>
+    </li>
+  </ol>
+</section>
+
 <section class="section scope blueprint" id="map">
   <div class="compact-heading">
-    <div><span>02 / PROCESS MAP</span><h2><span class="nw">工程ごとに、</span><span class="nw">確かめられること。</span></h2></div>
+    <div><span>03 / PROCESS MAP</span><h2><span class="nw">工程ごとに、</span><span class="nw">確かめられること。</span></h2></div>
     <p>ごみを受け入れてから排ガスを出すまでを、左から並べました。お持ちの施設の工程をたどってみてください。</p>
   </div>
   <div class="inc-train">
@@ -109,7 +194,7 @@
 
 <section class="section method" id="report">
   <div class="compact-heading">
-    <div><span>03 / DELIVERABLES</span><h2><span class="nw">運転記録から、</span><span class="nw">運転幅のレポートへ。</span></h2></div>
+    <div><span>04 / DELIVERABLES</span><h2><span class="nw">運転記録から、</span><span class="nw">運転幅のレポートへ。</span></h2></div>
     <p>中央はお渡しするレポートの見本です。数値は仮のものです。</p>
   </div>
   <div class="pp-flow inc-flow">
@@ -146,7 +231,7 @@
 
 <section class="section scope" id="check">
   <div class="compact-heading">
-    <div><span>04 / CHECK SHEET</span><h2><span class="nw">自社の炉の"なぜ"を、</span><span class="nw">説明できますか。</span></h2></div>
+    <div><span>05 / CHECK SHEET</span><h2><span class="nw">自社の炉の"なぜ"を、</span><span class="nw">説明できますか。</span></h2></div>
   </div>
   <div class="pp-check">
     <aside class="pp-meter">
@@ -176,7 +261,7 @@
 
 <section class="section scope" id="data">
   <div class="compact-heading">
-    <div><span>05 / DATA &amp; COST</span><h2>先にお答えしておくこと。</h2></div>
+    <div><span>06 / DATA &amp; COST</span><h2>先にお答えしておくこと。</h2></div>
   </div>
   <div class="svc-two">
     <article>
@@ -194,36 +279,24 @@
 
 <section class="section method" id="flow">
   <div class="compact-heading">
-    <div><span>06 / FLOW</span><h2>ご相談の流れ。</h2></div>
-    <p>図面や記録が揃っていなくても始められます。各段階で出てくるものの見本です。</p>
+    <div><span>07 / FLOW</span><h2>お問い合わせから、<span class="nw">レポートまで。</span></h2></div>
+    <p>図面や記録が揃っていなくても始められます。</p>
   </div>
-  <div class="pp-phases four">
-    <article>
-      <header><small>STEP 1</small><b>お話を伺う</b><span>オンラインでも</span></header>
-      <div class="pp-sample inc-s-memo" aria-hidden="true"><div><i class="t"></i><p>□ 受入量を増やしたい</p><p>□ 同じ場所が傷む</p><p>□ 見積の確認</p><p>□ 若手への引き継ぎ</p></div></div>
-      <ul><li>困りごとの整理</li><li>お預かりする記録の相談</li></ul>
-    </article>
-    <article>
-      <header><small>STEP 2</small><b>記録をお預かり</b><span>まずは1か月分</span></header>
-      <div class="pp-sample" aria-hidden="true"><table class="pp-cmp"><tr><th>時刻</th><th>炉温</th><th>O₂</th><th>CO</th></tr><tr><td>8:00</td><td>○○</td><td>○○</td><td>○○</td></tr><tr><td>9:00</td><td>○○</td><td>○○</td><td>○○</td></tr><tr><td>10:00</td><td>○○</td><td>○○</td><td>○○</td></tr></table></div>
-      <ul><li>運転記録</li><li>設備の仕様がわかる資料</li></ul>
-    </article>
-    <article>
-      <header><small>STEP 3</small><b>計算で見える化</b><span>収支と余裕</span></header>
-      <div class="pp-sample inc-s-chart" aria-hidden="true"><img src="assets/inc-report-map.svg?v=20261106" alt="" loading="lazy"></div>
-      <ul><li>運転の余裕マップ</li><li>設備ごとの負荷</li></ul>
-    </article>
-    <article>
-      <header><small>STEP 4</small><b>報告と改善のご提案</b><span>手を入れる順番</span></header>
-      <div class="pp-sample" aria-hidden="true"><table class="pp-cmp"><tr><th>場面</th><th>見る</th><th>操作</th></tr><tr><td>炉温が低い</td><td>O₂</td><td>投入を絞る</td></tr><tr><td>COが上がる</td><td>二次空気</td><td>空気を足す</td></tr></table></div>
-      <ul><li>運転幅レポート</li><li>判断表・「なぜ」帳</li></ul>
-    </article>
-  </div>
+  <ol class="svc-flow">
+    <li><span class="no">01</span><h3>メールでご連絡</h3><p>困りごとを数行で。資料はこの時点では要りません。</p></li>
+    <li><span class="no">02</span><h3>お話を伺う</h3><p>初回は無料です。オンラインでも伺います。</p><span class="get">困りごとの整理、お預かりする記録の相談</span>
+      <div class="mini inc-s-memo" aria-hidden="true"><div><i class="t"></i><p>□ 受入量を増やしたい</p><p>□ 同じ場所が傷む</p><p>□ 見積の確認</p></div></div></li>
+    <li><span class="no">03</span><h3>範囲と費用を決める</h3><p>秘密保持契約を結び、1設備・1テーマの定額でお見積りします。</p><span class="get">お見積り、秘密保持契約</span></li>
+    <li><span class="no">04</span><h3>記録をお預かりして計算</h3><p>まずは1か月分の運転記録と、設備の仕様がわかる資料から。</p><span class="get">収支の計算、設備ごとの余裕</span>
+      <div class="mini" aria-hidden="true"><table class="pp-cmp"><tr><th>時刻</th><th>炉温</th><th>O₂</th><th>CO</th></tr><tr><td>8:00</td><td>○○</td><td>○○</td><td>○○</td></tr><tr><td>9:00</td><td>○○</td><td>○○</td><td>○○</td></tr></table></div></li>
+    <li class="goal"><span class="no">05</span><h3>報告と改善のご提案</h3><p>手を入れる場所と順番をご説明します。</p><span class="get">運転幅レポート、判断表、「なぜ」帳</span>
+      <div class="mini" aria-hidden="true"><img src="assets/inc-report-map.svg?v=20261106" alt="" loading="lazy"></div></li>
+  </ol>
 </section>
 
 <section class="section rd-section" id="principal">
   <div class="rd-copy">
-    <span>07 / WHO</span>
+    <span>08 / WHO</span>
     <h2>設計の計算で、<br>確かめ直す役です。</h2>
     <p>代表は大手エンジニアリング会社で約13年、プラントの機械設計・建設・試運転に携わってきました。炉を毎日運転する立場ではありません。現場の皆さまの勘や経験を、熱と空気と排ガスの計算で確かめ直し、理由のある判断として残すのが当社の役割です。</p>
     <p>受託業務で知り得た個別の情報は、他の案件に流用しません。</p>
@@ -232,7 +305,7 @@
 
 <section class="section company blueprint" id="contact">
   <div class="section-heading">
-    <span>08 / CONTACT</span><h2>お問い合わせ</h2>
+    <span>09 / CONTACT</span><h2>お問い合わせ</h2>
     <p>会社概要は<a href="index.html#company">会社案内</a>をご覧ください。ほかの支援は<a href="pilot-plant">PoC・実証プラントの設計与件づくり</a>・<a href="owners-engineering">オーナーズエンジニアリング</a>をご覧ください。</p>
   </div>
   <div class="company-grid">

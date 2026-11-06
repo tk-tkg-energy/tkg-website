@@ -49,3 +49,52 @@
 
 @media (max-width:1100px){.svc-cases{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:700px){.svc-cases{grid-template-columns:1fr}}
+
+/* ===== 約束（性分 → だから）と番号付きの流れ（2026-11-06） ===== */
+.svc-promise{list-style:none;margin:0;padding:0;counter-reset:pr;border-top:2px solid var(--blue)}
+.svc-promise>li{counter-increment:pr;display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:56px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line)}
+.svc-promise .pr-no{font:11px monospace;color:var(--gold);letter-spacing:.14em}
+.svc-promise .pr-no::after{content:" " counter(pr,decimal-leading-zero)}
+.svc-promise .pr-fact{margin:12px 0 0;padding:10px 16px;background:#f1eee6;font-size:16px;line-height:1.8;color:#3d4750;max-width:640px}
+.svc-promise .pr-so::before{content:"↓ "}
+.svc-promise .pr-so{display:inline-block;margin:12px 0 6px 16px;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.1em}
+.svc-promise h3{margin:0 0 10px;font:600 23px/1.55 var(--serif,serif);color:var(--blue)}
+.svc-promise p.pr-body{margin:0;font-size:14.5px;line-height:1.95;color:var(--ink);max-width:640px}
+.svc-win{margin:0;background:#fff;border:1px solid #d9d4c6;box-shadow:0 10px 26px rgba(17,47,76,.10)}
+.svc-win figcaption{display:flex;align-items:center;gap:8px;padding:7px 12px;background:#f1eee6;border-bottom:1px solid #d9d4c6;font-size:11.5px;color:var(--muted)}
+.svc-win figcaption::before{content:"";width:8px;height:8px;border:1.5px solid var(--gold);border-radius:2px}
+.svc-win figcaption em{margin-left:auto;font-style:normal;font:10.5px monospace;color:#9a9486}
+.svc-win .wb{padding:14px 16px;min-height:150px;display:grid;align-content:center}
+.svc-win .wb img{width:100%;height:auto;display:block}
+.svc-win .wb svg{width:100%;height:auto;display:block}
+.svc-win .wb svg text{font-size:10px;fill:var(--muted);font-family:inherit}
+.svc-win .wb svg .ax{stroke:#b9b4a6;stroke-width:1;fill:none}
+.svc-win .wb svg .ln{stroke:var(--blue);stroke-width:1.8;fill:none}
+.svc-win .wb svg .ln2{stroke:var(--gold);stroke-width:1.8;fill:none;stroke-dasharray:5 4}
+.svc-win .wb svg .band{fill:rgba(180,147,62,.12)}
+.svc-win table{width:100%;border-collapse:collapse;font-size:12.5px}
+.svc-win th,.svc-win td{border-bottom:1px solid #e3dfd3;padding:6px 6px;text-align:left;font-weight:400}
+.svc-win tr:first-child th{background:#f1eee6;color:var(--muted);font-size:11.5px}
+.svc-win td.hl{color:var(--blue);font-weight:700}
+.svc-win .why{font-size:12.5px;line-height:1.8}
+.svc-win .why div{display:grid;grid-template-columns:64px 1fr;gap:8px;border-bottom:1px solid #e3dfd3;padding:6px 0}
+.svc-win .why b{font-weight:400;color:var(--muted);font-size:11.5px}
+
+.svc-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:22px;position:relative}
+.svc-flow::before{content:"";position:absolute;top:23px;left:24px;right:calc(20% - 24px);border-top:1px solid var(--gold)}
+.svc-flow li{position:relative}
+.svc-flow .no{position:relative;z-index:1;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--blue);color:var(--gold);border:1px solid var(--gold);font:13px monospace}
+.svc-flow h3{margin:16px 0 6px;font:600 17px/1.5 var(--serif,serif);color:var(--blue)}
+.svc-flow p{margin:0;font-size:13.5px;line-height:1.85;color:var(--muted)}
+.svc-flow .get{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--line);font-size:12.5px;line-height:1.7;color:var(--ink)}
+.svc-flow .get::before{content:"出てくるもの　";color:var(--gold);font-size:11px}
+.svc-flow li.goal .no{background:var(--gold);color:#fff}
+.svc-flow .mini{margin-top:12px;background:#f1eee6;padding:10px;min-height:96px;display:grid;align-content:center}
+.svc-flow .mini img{width:100%;height:auto;display:block}
+.svc-flow .mini .pp-cmp{font-size:11px}
+.svc-flow-next{margin:30px 0 14px;font:600 15px var(--serif,serif);color:var(--blue)}
+
+@media (max-width:1100px){.svc-promise>li{grid-template-columns:minmax(0,1fr) 340px;gap:32px}.svc-flow{grid-template-columns:repeat(3,1fr);row-gap:34px}.svc-flow::before{display:none}}
+@media (max-width:700px){.svc-promise>li{grid-template-columns:1fr;gap:20px;padding:26px 0}.svc-promise h3{font-size:20px}.svc-flow{grid-template-columns:1fr;gap:0}.svc-flow li{display:grid;grid-template-columns:46px 1fr;column-gap:16px;padding-bottom:24px}.svc-flow li>*:not(.no){grid-column:2}.svc-flow li .no{grid-row:1 / span 4}.svc-flow h3{margin-top:10px}.svc-flow li:not(:last-child)::after{content:"";position:absolute;left:23px;top:46px;bottom:0;border-left:1px solid var(--gold)}}
+.svc-flow .mini.inc-s-memo>div{width:100%;padding:10px 12px}
+.svc-flow .mini.inc-s-memo p{font-size:11.5px;white-space:nowrap;margin:3px 0}
