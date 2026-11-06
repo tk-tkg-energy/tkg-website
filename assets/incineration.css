@@ -1,0 +1,67 @@
+/* incineration.html 専用（2026-11-06 図解型。共通部品は service.css / pilot.css） */
+
+/* 02 工程ごとの列。設備の絵は各列の頭に置き、列と絵の位置が必ずそろうようにする */
+.inc-train{border-top:2px solid rgba(200,178,122,.6);padding-top:10px}
+.inc-cols{position:relative;display:grid;grid-template-columns:repeat(6,1fr)}
+.inc-eq{position:relative;margin:0 0 12px;height:190px;display:grid;place-items:center}
+.inc-eq img{width:100%;max-width:190px;height:auto;display:block;mix-blend-mode:screen}
+.inc-eq b{position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#c8b27a;color:#112f4c;font:600 12px/24px monospace;text-align:center}
+.inc-cols h3,.inc-cols .pain,.inc-cols dl{position:relative}
+.inc-cols article{padding:8px 14px 6px;border-right:1px solid rgba(255,255,255,.12);color:#e9edf2}
+.inc-cols article:last-child{border-right:0}
+.inc-cols h3{margin:0 0 8px;font-size:16px;line-height:1.4;color:#fff}
+.inc-cols h3 small{display:block;font:11px monospace;color:#c8b27a;letter-spacing:.1em;margin-bottom:2px}
+.inc-cols .pain{margin:0 0 10px;font-size:14px;font-weight:600;line-height:1.6;color:#f2dfae}
+.inc-cols dl{margin:0}
+.inc-cols dt{font:11px monospace;color:#c8b27a;letter-spacing:.06em;margin-top:8px}
+.inc-cols dd{margin:3px 0 0;font-size:13px;line-height:1.7;color:#c0cad2}
+
+/* 03 レポート見本（明るい背景の上に置くので手順の色を反転） */
+.inc-flow .pp-steps::before{border-left-color:rgba(180,147,62,.6)}
+.inc-flow .pp-steps i{background:var(--white);color:var(--gold);border-color:var(--gold)}
+.inc-flow .pp-steps b{color:var(--ink)}
+.inc-flow .pp-steps span{color:var(--muted)}
+.inc-flow .pp-steps li.out i{background:var(--gold);color:#fff}
+.inc-flow .pp-steps li.out b{color:var(--blue)}
+.pp-flow.inc-flow{grid-template-columns:minmax(200px,.75fr) minmax(420px,1.6fr) minmax(220px,.8fr)}
+.inc-flow .pp-sheet{box-shadow:0 18px 40px rgba(17,47,76,.18);border:1px solid var(--line)}
+.inc-flow .pp-x{background:var(--blue);border-color:var(--blue)}
+.inc-env .ax{fill:none;stroke:#8a96a3;stroke-width:1.6}
+.inc-env .env{fill:rgba(31,58,95,.12);stroke:var(--blue);stroke-width:2}
+.inc-env .now{fill:#b4533e}
+.inc-env text{font-size:10px;fill:var(--muted)}
+.inc-env .lb{fill:#b4533e;font-weight:700}
+.inc-env .lb2{fill:var(--blue)}
+.pp-sheet .inc-env{max-height:120px}
+.inc-bars{display:grid;gap:6px}
+.inc-bars div{display:grid;grid-template-columns:86px 1fr 44px;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.inc-bars i{display:block;height:10px;background:linear-gradient(90deg,var(--blue) calc(var(--v) * 1%),#e3ded0 0)}
+.inc-bars b{font-weight:600;color:var(--ink);text-align:right}
+.inc-bars .hot i{background:#b4533e}
+.inc-bars .hot b,.inc-bars .hot span{color:#b4533e;font-weight:700}
+.inc-conc{margin:0;font-size:13px;line-height:1.7;border-left:3px solid #b4533e;padding-left:10px}
+
+/* 06 相談の流れ（4列） */
+.pp-phases.four{grid-template-columns:repeat(4,1fr);gap:34px}
+.pp-phases.four article:not(:last-child)::after{right:-26px}
+.inc-s-memo div{background:#fff;border:1px solid #d9d4c6;padding:12px 14px;width:80%;box-shadow:3px 3px 0 #e2dccd}
+.inc-s-memo i.t{display:block;height:8px;width:60%;background:var(--blue);margin-bottom:8px}
+.inc-s-memo p{margin:2px 0;font-size:12px;color:var(--muted)}
+.inc-s-chart img{width:100%;height:auto;display:block;background:#fff}
+.inc-chart{width:100%;height:auto;display:block;border:1px solid #e3ded0;background:#fff}
+
+@media (max-width:1100px){
+  .pp-flow.inc-flow{grid-template-columns:1fr 1.4fr}
+  .inc-cols{grid-template-columns:repeat(3,1fr)}
+  .inc-cols article:nth-child(3){border-right:0}
+  .pp-phases.four{grid-template-columns:1fr 1fr;max-width:none}
+  .pp-phases.four article::after{display:none}
+}
+@media (max-width:700px){
+  .pp-flow.inc-flow{grid-template-columns:1fr}
+  .inc-cols{grid-template-columns:1fr}
+  .inc-cols article{border-right:0;border-bottom:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:110px 1fr;column-gap:14px}
+  .inc-cols article .inc-eq{grid-row:1 / span 3;height:120px}
+  .inc-cols article .inc-eq img{max-width:110px}
+  .pp-phases.four{grid-template-columns:1fr}
+}

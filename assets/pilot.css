@@ -1,0 +1,116 @@
+/* pilot-plant.html 専用（2026-11-06 見本型に作り直し） */
+.nw{display:inline-block}
+
+/* 02 手順 → 設計与件書の見本 → あわせて渡すもの（1画面に収める3列） */
+.pp-flow{display:grid;grid-template-columns:minmax(220px,.9fr) minmax(380px,1.35fr) minmax(220px,.85fr);gap:40px;align-items:start}
+.pp-steps{list-style:none;margin:0;padding:0;position:relative}
+.pp-steps::before{content:"";position:absolute;left:19px;top:20px;bottom:40px;border-left:2px dashed rgba(200,178,122,.6)}
+.pp-steps li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:start;padding:0 0 26px}
+.pp-steps i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:600 13px monospace;font-style:normal;background:#112f4c;border:2px solid #c8b27a;color:#c8b27a;z-index:1}
+.pp-steps b{display:block;color:#fff;font-size:17px;line-height:1.4;margin-top:8px}
+.pp-steps span{display:block;color:#c0cad2;font-size:13.5px;line-height:1.7;margin-top:4px}
+.pp-steps li.out i{background:#c8b27a;color:#112f4c}
+.pp-steps li.out b{color:#e8d6a6}
+
+.pp-sheet{margin:0;background:#fbfaf5;color:var(--ink);padding:26px 28px 24px;box-shadow:0 22px 50px rgba(0,0,0,.35);position:relative}
+.pp-sheet::after{content:"見本";position:absolute;top:14px;right:-10px;background:#c8b27a;color:#112f4c;font-size:12px;font-weight:700;padding:3px 10px}
+.pp-sheet header{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--blue);padding-bottom:10px;margin-bottom:12px;flex-wrap:wrap}
+.pp-sheet header small{font:11px monospace;color:var(--gold);letter-spacing:.08em;width:100%}
+.pp-sheet header b{font-size:20px;color:var(--blue)}
+.pp-sheet header em{margin-left:auto;font-style:normal;font:12px monospace;color:var(--muted);border:1px solid var(--line);padding:1px 8px}
+.pp-sheet h4{margin:14px 0 6px;font-size:13.5px;color:var(--blue)}
+.pp-sheet table{width:100%;border-collapse:collapse;font-size:13px}
+.pp-sheet th,.pp-sheet td{border-bottom:1px solid #e3ded0;padding:5px 4px;text-align:left;font-weight:400}
+.pp-sheet th{color:var(--muted);width:38%}
+.pp-sheet svg{width:100%;height:auto;max-height:72px;display:block}
+.pp-sheet svg rect{fill:#fff;stroke:var(--blue);stroke-width:1.6}
+.pp-sheet svg text{font-size:11px;text-anchor:middle;fill:var(--ink)}
+.pp-sheet svg text.n{fill:var(--gold);font-size:11px}
+.pp-sheet svg .s,.pp-sheet svg .a{fill:none;stroke:var(--gold);stroke-width:1.6}
+.pp-sheet ul{margin:0;padding-left:1.2em;font-size:13px;line-height:1.8}
+
+.pp-extras{display:grid;gap:18px}
+.blueprint .svc-note{color:#c0cad2}
+.pp-x{border:1px solid rgba(200,178,122,.45);background:rgba(255,255,255,.05);padding:18px 18px 16px;color:#e9edf2}
+.pp-x small{display:block;font:11px monospace;color:#c8b27a;letter-spacing:.1em;margin-bottom:10px}
+.pp-x b{display:block;font-size:16px}
+.pp-x p{margin:8px 0 0;font-size:13px;line-height:1.75;color:#c0cad2}
+.pp-x svg{width:100%;height:auto;display:block;margin-top:8px}
+.pp-x svg .bar{fill:rgba(200,178,122,.55)}
+.pp-x svg .w{fill:none;stroke:#fff;stroke-width:2}
+.pp-eq{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;color:#e9edf2}
+.pp-eq th,.pp-eq td{border-bottom:1px solid rgba(255,255,255,.18);padding:4px 3px;text-align:left;font-weight:400}
+.pp-eq th{color:#c8b27a;font-size:11px}
+.pp-x ul.ck{list-style:none;margin:10px 0 0;padding:0;font-size:13px;line-height:1.9;color:#e9edf2}
+.pp-x ul.ck li::before{content:"□";color:#c8b27a;margin-right:8px}
+
+/* 03 チェックシート：左にメーター、右に設問 */
+.pp-check{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start}
+.pp-meter{position:sticky;top:110px;text-align:center;border:1px solid var(--line);background:var(--white);padding:28px 24px}
+.pp-meter svg{width:170px;height:170px;transform:rotate(-90deg);display:block;margin:0 auto}
+.pp-meter circle{fill:none;stroke-width:10}
+.pp-meter .bg{stroke:#e6e1d3}
+.pp-meter .fg{stroke:var(--blue);stroke-linecap:round;transition:stroke-dasharray .3s}
+.pp-meter .fg.warn{stroke:#b4533e}
+.pp-meter-num{margin-top:-118px;height:118px}
+.pp-meter-num b{font:600 44px/1 var(--serif,serif);color:var(--blue)}
+.pp-meter-num span{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+.pp-meter-no{font-size:15px;margin:10px 0 0}
+.pp-meter-no b{font-size:22px;color:#b4533e;margin:0 4px}
+.pp-meter .svc-result{text-align:left;font-size:14px;margin-top:16px}
+.pp-meter-note{font-size:12px;color:var(--muted);margin:14px 0 0;line-height:1.7}
+.pp-qs{list-style:none;padding:0;margin:0;counter-reset:q}
+.pp-qs li{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0;counter-increment:q}
+.pp-qs li::before{content:counter(q,decimal-leading-zero);font:13px monospace;color:var(--gold)}
+.pp-qs li.grp{display:block;counter-increment:none;border-bottom:2px solid var(--blue);padding:22px 0 8px;font-weight:700;font-size:15px;color:var(--blue)}
+.pp-qs li.grp:first-child{padding-top:0}
+.pp-qs li.grp::before{content:none}
+.pp-qs li span{font-size:15px;line-height:1.75}
+.pp-qs .yn{display:flex;gap:6px}
+.pp-qs .yn button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--white);padding:6px 14px;cursor:pointer;color:var(--ink)}
+.pp-qs .yn button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* 04 フェーズごとに出るもの（見本つき） */
+.pp-phases{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;counter-reset:ph}
+.pp-phases article{position:relative;background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column}
+.pp-phases article:not(:last-child)::after{content:"";position:absolute;right:-31px;top:44px;width:18px;height:18px;border-top:3px solid var(--gold);border-right:3px solid var(--gold);transform:rotate(45deg)}
+.pp-phases header{background:var(--blue);color:#fff;padding:16px 20px}
+.pp-phases header small{display:block;font:11px monospace;color:#c8b27a;letter-spacing:.12em}
+.pp-phases header b{display:block;font-size:18px;margin:2px 0}
+.pp-phases header span{font-size:13px;color:#c0cad2}
+.pp-sample{min-height:170px;margin:18px 20px 0;background:#f1eee6;display:grid;place-items:center;padding:14px;overflow:hidden}
+.pp-s-doc{position:relative}
+.pp-s-doc .pg{position:absolute;width:104px;height:138px;background:#fff;border:1px solid #d9d4c6;padding:12px 10px;display:flex;flex-direction:column;gap:6px;box-shadow:3px 3px 0 #e2dccd}
+.pp-s-doc .pg.back{transform:translate(14px,8px) rotate(4deg);z-index:0}
+.pp-s-doc .pg:not(.back){z-index:1;transform:translate(-8px,-4px)}
+.pp-s-doc i{display:block;height:4px;background:#cfd5dc}
+.pp-s-doc i.t{height:8px;width:70%;background:var(--blue)}
+.pp-s-doc i.s{width:60%}
+.pp-s-doc .tb{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin:3px 0}
+.pp-s-doc .tb span{height:8px;border:1px solid #cfd5dc}
+.pp-cmp{border-collapse:collapse;font-size:12.5px;background:#fff;width:100%}
+.pp-cmp th,.pp-cmp td{border:1px solid #dcd7c9;padding:4px 6px;text-align:center;font-weight:400}
+.pp-cmp tr:first-child th{background:var(--blue);color:#fff}
+.pp-cmp th{color:var(--muted);text-align:left}
+.pp-s-gantt{display:flex;flex-direction:column;justify-content:center;gap:12px;place-items:stretch}
+.pp-s-gantt div{display:grid;grid-template-columns:52px 1fr;align-items:center;font-size:12px;color:var(--muted);position:relative}
+.pp-s-gantt i{display:block;height:12px;background:var(--blue);margin-left:calc(var(--s) * 1%);width:calc(var(--l) * 1%)}
+.pp-s-gantt i.hot{background:var(--gold)}
+.pp-phases ul{list-style:none;margin:16px 20px 20px;padding:0;font-size:14px;line-height:1.7}
+.pp-phases ul li{padding:5px 0 5px 18px;border-bottom:1px solid #ebe7dc;position:relative}
+.pp-phases ul li::before{content:"";position:absolute;left:2px;top:13px;width:7px;height:7px;background:var(--gold)}
+.pp-gate-note{margin:22px 0 0;font-size:14px;color:var(--muted)}
+
+@media (max-width:1100px){
+  .pp-flow{grid-template-columns:1fr 1.4fr}
+  .pp-extras{grid-column:1 / -1;grid-template-columns:1fr 1fr}
+  .pp-check{grid-template-columns:1fr}.pp-meter{position:static}
+  .pp-phases{grid-template-columns:1fr;max-width:560px;gap:40px}
+  .pp-phases article:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-29px;transform:translateX(-50%) rotate(135deg)}
+}
+@media (max-width:700px){
+  .pp-flow{grid-template-columns:1fr}
+  .pp-extras{grid-template-columns:1fr}
+  .pp-sheet::after{right:0}
+  .pp-qs li{grid-template-columns:34px 1fr}.pp-qs .yn{grid-column:2}
+}
