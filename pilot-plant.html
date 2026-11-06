@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="assets/bp-hero.css?v=20261015c">
 <link rel="stylesheet" href="assets/site-enhance.css?v=20261015d">
 <link rel="stylesheet" href="assets/service.css?v=20261106c">
-<link rel="stylesheet" href="assets/pilot.css?v=20261106">
+<link rel="stylesheet" href="assets/pilot.css?v=20261107">
 <script src="assets/nav.js?v=20261015" defer></script>
 <script src="assets/motion.js?v=20261015g" defer></script>
 </head>
@@ -187,34 +187,91 @@
     <div><span>03 / DELIVERABLES</span><h2><span class="nw">実験データから、</span><span class="nw">設計与件書へ。</span></h2></div>
     <p>Phase 0（4〜6週・定額）でお渡しするものです。中央は設計与件書の見本です。</p>
   </div>
-  <div class="pp-flow">
+  <div class="pp-flow pp-flow2">
     <ol class="pp-steps">
       <li><i>IN</i><div><b>実験データ</b><span>収率・運転条件・不純物</span></div></li>
       <li><i>1</i><div><b>読み解き</b><span>規模を大きくすると変わる条件（伝熱・混合・滞留時間）を洗い出す</span></div></li>
       <li><i>2</i><div><b>プロセス案を1本に</b><span>候補を比べて決め、PFDと物質収支にする</span></div></li>
       <li class="out"><i>3</i><div><b>設計与件書にまとめる</b><span>設計者・メーカーが読める形に</span></div></li>
     </ol>
-    <figure class="pp-sheet" aria-label="設計与件書の見本">
-      <header><small>設計与件書（見本）</small><b>○○パイロット設備</b><em>Rev.0</em></header>
-      <h4>1. 設計条件</h4>
-      <table>
-        <tr><th>処理能力</th><td>○○ kg/h</td></tr>
-        <tr><th>運転方式</th><td>連続 ／ 回分</td></tr>
-        <tr><th>温度・圧力</th><td>○○ ℃ ／ ○○ MPa</td></tr>
-        <tr><th>接液部の材質</th><td>候補とその根拠</td></tr>
-        <tr><th>ユーティリティ</th><td>蒸気・冷却水・電力の量</td></tr>
-        <tr><th>関係法規</th><td>該当しそうなものの当たり</td></tr>
-      </table>
-      <h4>2. プロセスフロー</h4>
-      <svg viewBox="0 0 300 64" aria-hidden="true">
-        <rect x="6" y="12" width="40" height="44" rx="5"/><text x="26" y="38">原料</text>
-        <rect x="92" y="20" width="56" height="28" rx="14"/><text x="120" y="38">反応</text>
-        <rect x="194" y="6" width="30" height="52" rx="8"/><text x="209" y="36">分離</text>
-        <path class="s" d="M46 34H92M148 34H194M224 34H292"/><path class="a" d="M86 30l6 4-6 4M188 30l6 4-6 4M286 30l6 4-6 4"/>
-        <text class="n" x="66" y="28">①</text><text class="n" x="168" y="28">②</text><text class="n" x="256" y="28">③</text>
+    <figure class="pp-sheet pp-sheet2" aria-label="設計与件書の見本">
+      <header>
+        <div class="tb-title"><small>設計与件書（見本）</small><b>○○パイロット設備</b></div>
+        <table class="tb-stamp"><tr><th>文書番号</th><td>DB-○○-001</td><th>Rev.</th><td>0</td></tr><tr><th>作成</th><td></td><th>承認</th><td></td></tr></table>
+      </header>
+      <h4><span>1</span>プロセスフロー（PFD）</h4>
+      <svg class="pfd" viewBox="0 0 520 244" role="img" aria-label="原料槽からポンプ、予熱器、撹拌付き反応器、冷却器、分離塔を経て製品槽と副生物に分かれるプロセスフロー図の見本。反応器に伝熱と混合、分離塔に滞留時間と分離の確認箇所の印がある">
+        <defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4 0 8z" fill="#112f4c"/></marker>
+          <marker id="aru" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4 0 8z" fill="#8a9aa8"/></marker></defs>
+        <path class="pl" d="M34 34V68" marker-end="url(#ar)"/>
+        <path class="pl" d="M34 152V158H74"/>
+        <path class="pl" d="M94 158H140V128" marker-end="url(#ar)"/>
+        <path class="pl" d="M140 92V56H212V78" marker-end="url(#ar)"/>
+        <path class="pl" d="M250 150H282" marker-end="url(#ar)"/>
+        <path class="pl" d="M318 150H340V112H368" marker-end="url(#ar)"/>
+        <path class="pl" d="M384 28V16H496" marker-end="url(#ar)"/>
+        <path class="pl" d="M384 192V206H438" marker-end="url(#ar)"/>
+        <path class="st" d="M98 110H124L129 102 135 118 141 102 147 118 152 110H182" marker-end="url(#aru)"/>
+        <path class="cw" d="M300 200V168L292 163 308 157 292 151 308 145 292 139 300 134V112" marker-end="url(#aru)"/>
+        <rect class="eq" x="14" y="70" width="40" height="82" rx="14"/>
+        <circle class="eq" cx="84" cy="158" r="10"/><path class="eqf" d="M80 152L90 158 80 164z"/>
+        <circle class="eq" cx="140" cy="110" r="17"/>
+        <rect class="jk" x="194" y="74" width="62" height="92" rx="18"/>
+        <rect class="eq" x="200" y="80" width="50" height="80" rx="15"/>
+        <rect class="eq" x="218" y="58" width="14" height="12"/><path class="eqs" d="M225 70V132M212 132H238M214 120H236"/>
+        <circle class="eq" cx="300" cy="150" r="17"/>
+        <rect class="eq" x="370" y="28" width="28" height="164" rx="12"/>
+        <path class="tr" d="M372 54H390M378 72H396M372 90H390M378 108H396M372 126H390M378 144H396M372 162H390"/>
+        <rect class="eq" x="440" y="168" width="40" height="52" rx="12"/>
+        <g class="cf"><path d="M256 98H266"/><rect x="266" y="86" width="70" height="24" rx="12"/><text x="301" y="102">伝熱・混合</text></g>
+        <g class="cf"><path d="M398 84H408"/><rect x="408" y="72" width="84" height="24" rx="12"/><text x="450" y="88">滞留時間・分離</text></g>
+        <text class="tg" x="34" y="176">TK-101</text><text class="nm" x="34" y="190">原料槽</text>
+        <text class="tg" x="84" y="182">P-101</text>
+        <text class="tg" x="114" y="136">E-101</text><text class="nm" x="114" y="149">予熱器</text>
+        <text class="tg" x="225" y="182">R-101</text><text class="nm" x="225" y="196">反応器</text>
+        <text class="tg" x="272" y="130">E-102</text><text class="nm" x="272" y="182">冷却器</text>
+        <text class="tg" x="356" y="214">T-101</text><text class="nm" x="356" y="228">分離塔</text>
+        <text class="tg" x="460" y="236">TK-102</text>
+        <text class="nm" x="34" y="26">原料</text>
+        <text class="nm st-t" x="98" y="102" text-anchor="start">蒸気</text>
+        <text class="nm cw-t" x="306" y="198" text-anchor="start">冷却水</text>
+        <text class="nm end" x="496" y="10">副生物・排ガス</text>
+        <text class="nm" x="460" y="160">製品</text>
+        <g class="sn"><path d="M56 150l6-6 6 6-6 6z"/><text x="62" y="153">1</text></g>
+        <g class="sn"><path d="M170 48l6-6 6 6-6 6z"/><text x="176" y="51">2</text></g>
+        <g class="sn"><path d="M260 142l6-6 6 6-6 6z"/><text x="266" y="145">3</text></g>
+        <g class="sn"><path d="M346 120l6-6 6 6-6 6z"/><text x="352" y="123">4</text></g>
+        <g class="sn"><path d="M396 8l6-6 6 6-6 6z"/><text x="402" y="11">5</text></g>
+        <g class="sn"><path d="M404 198l6-6 6 6-6 6z"/><text x="410" y="201">6</text></g>
       </svg>
-      <h4>3. パイロットで確かめること</h4>
-      <ul><li>収率 ○○％以上</li><li>純度 ○○％以上</li><li>○○時間の連続運転</li></ul>
+      <table class="stream">
+        <tr><th>流番</th><td><i><em>1</em></i></td><td><i><em>2</em></i></td><td><i><em>3</em></i></td><td><i><em>4</em></i></td><td><i><em>5</em></i></td><td><i><em>6</em></i></td></tr>
+        <tr><th>流量 kg/h</th><td>○○</td><td>○○</td><td>○○</td><td>○○</td><td>○○</td><td>○○</td></tr>
+        <tr><th>温度 ℃</th><td>○○</td><td>○○</td><td>○○</td><td>○○</td><td>○○</td><td>○○</td></tr>
+        <tr><th>圧力 MPa</th><td>○○</td><td>○○</td><td>○○</td><td>○○</td><td>○○</td><td>○○</td></tr>
+      </table>
+      <div class="sheet-cols">
+        <div>
+          <h4><span>2</span>設計条件</h4>
+          <table class="cond">
+            <tr><th>処理能力</th><td>○○ kg/h</td></tr>
+            <tr><th>運転方式</th><td>連続 ／ 回分</td></tr>
+            <tr><th>接液部の材質</th><td>候補と根拠</td></tr>
+            <tr><th>ユーティリティ</th><td>蒸気・冷却水・電力</td></tr>
+            <tr><th>関係法規</th><td>該当しそうなもの</td></tr>
+          </table>
+        </div>
+        <div>
+          <h4><span>3</span>パイロットで確かめること</h4>
+          <ul class="gate">
+            <li><b>収率</b><div class="trk"><i class="lab" style="--x:78%"></i><i class="line" style="--x:66%"></i></div></li>
+            <li><b>純度</b><div class="trk"><i class="lab" style="--x:84%"></i><i class="line" style="--x:72%"></i></div></li>
+            <li><b>連続運転</b><div class="trk"><i class="lab" style="--x:30%"></i><i class="line" style="--x:62%"></i></div></li>
+          </ul>
+          <p class="gate-key"><span class="k-lab"></span>ラボの結果　<span class="k-line"></span>次に進む判断ライン</p>
+          <p class="gate-note">連続運転はラボでは確かめきれない項目です。パイロットで最初に見ます。</p>
+        </div>
+      </div>
     </figure>
     <div class="pp-extras">
       <div class="pp-x">

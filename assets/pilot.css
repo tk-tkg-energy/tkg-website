@@ -114,3 +114,57 @@
   .pp-sheet::after{right:0}
   .pp-qs li{grid-template-columns:34px 1fr}.pp-qs .yn{grid-column:2}
 }
+
+/* 設計与件書の見本 v2（2026-11-07：PFD＋流番表＋判断ライン） */
+.pp-flow.pp-flow2{grid-template-columns:minmax(200px,.72fr) minmax(460px,1.75fr) minmax(210px,.78fr);gap:36px}
+.pp-sheet2{padding:22px 24px;background:#fbfaf5}
+.pp-sheet2 header{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end;border-bottom:2px solid var(--blue);padding-bottom:10px;margin-bottom:6px}
+.pp-sheet2 .tb-title small{display:block;font:11px monospace;color:var(--gold);letter-spacing:.08em}
+.pp-sheet2 .tb-title b{font-size:19px;color:var(--blue)}
+.pp-sheet2 table.tb-stamp{width:auto;font-size:10.5px;border-collapse:collapse}
+.pp-sheet2 .tb-stamp th,.pp-sheet2 .tb-stamp td{border:1px solid #cfc9b8;padding:2px 6px;width:auto;color:var(--muted);background:#fff}
+.pp-sheet2 .tb-stamp td{min-width:34px;color:var(--ink)}
+.pp-sheet2 h4{display:flex;align-items:center;gap:8px;margin:14px 0 6px;font-size:13.5px;color:var(--blue)}
+.pp-sheet2 h4 span{display:inline-grid;place-items:center;width:18px;height:18px;background:var(--blue);color:#fff;font:11px monospace}
+.pp-sheet2 svg.pfd{max-height:none;background:#fff;border:1px solid #e1dccd;padding:6px 4px;box-sizing:border-box}
+.pfd .pl{fill:none;stroke:#112f4c;stroke-width:1.8}
+.pfd .st{fill:none;stroke:#c0603a;stroke-width:1.5;stroke-dasharray:4 3}
+.pfd .cw{fill:none;stroke:#2f7f95;stroke-width:1.5;stroke-dasharray:4 3}
+.pp-sheet .pfd .eq{fill:#fff;stroke:#112f4c;stroke-width:1.8}
+.pp-sheet .pfd rect.jk{fill:none;stroke:#c0603a;stroke-width:1.2;stroke-dasharray:3 3}
+.pfd .eqs{fill:none;stroke:#112f4c;stroke-width:1.6}
+.pfd .eqf{fill:#112f4c}
+.pfd .tr{stroke:#8a9aa8;stroke-width:1.2}
+.pp-sheet .pfd text{font-size:10px;text-anchor:middle;fill:#5e6871}
+.pp-sheet .pfd text.tg{font:600 9.5px monospace;fill:#112f4c}
+.pp-sheet .pfd text.st-t{fill:#c0603a;text-anchor:start}
+.pp-sheet .pfd text.cw-t{fill:#2f7f95;text-anchor:start}
+.pp-sheet .pfd .cf rect{fill:#b4933e;stroke:none}
+.pp-sheet .pfd .cf path{stroke:#b4933e;stroke-width:1.4;fill:none}
+.pp-sheet .pfd .cf text{fill:#fff;font-size:10.5px;font-weight:700}
+.pp-sheet .pfd .sn path{fill:#fff;stroke:#b4933e;stroke-width:1.2}
+.pp-sheet .pfd .sn text{font:600 8px monospace;fill:#b4933e}
+.pp-sheet2 table.stream{margin-top:6px;font-size:11.5px;background:#fff}
+.pp-sheet .stream th,.pp-sheet .stream td{padding:4px 3px}
+.pp-sheet2 .stream th{width:auto;white-space:nowrap;color:var(--muted);font-size:11px}
+.pp-sheet2 .stream td{text-align:center;color:#8a8576}
+.pp-sheet2 .stream i{display:inline-grid;place-items:center;width:14px;height:14px;border:1px solid #b4933e;transform:rotate(45deg);font-style:normal}
+.pp-sheet2 .stream i em{transform:rotate(-45deg);font:600 9px/1 monospace;color:#b4933e;font-style:normal}
+.sheet-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pp-sheet2 table.cond{font-size:12px}
+.pp-sheet2 .cond th{width:46%}
+.gate{list-style:none;margin:6px 0 0;padding:0}
+.gate li{display:grid;grid-template-columns:56px 1fr;align-items:center;gap:8px;padding:5px 0;font-size:12px}
+.gate b{font-weight:400;color:var(--ink)}
+.gate .trk{position:relative;height:12px;background:#e9e5d9}
+.gate .lab{position:absolute;left:0;top:0;bottom:0;width:var(--x);background:#112f4c}
+.gate .line{position:absolute;top:-4px;bottom:-4px;left:var(--x);width:0;border-left:2px solid #b4933e}
+.gate li:last-child .lab{background:#9aa7b3}
+.gate-key{margin:8px 0 0;font-size:11px;color:var(--muted)}
+.gate-key span{display:inline-block;vertical-align:middle;margin-right:4px}
+.gate-key .k-lab{width:14px;height:8px;background:#112f4c}
+.gate-key .k-line{width:0;height:12px;border-left:2px solid #b4933e;margin-left:6px}
+.gate-note{margin:6px 0 0;font-size:11px;line-height:1.7;color:var(--muted)}
+@media (max-width:1100px){.pp-flow.pp-flow2{grid-template-columns:1fr 1.5fr}.pp-flow2 .pp-extras{grid-column:1 / -1;grid-template-columns:1fr 1fr}}
+@media (max-width:700px){.pp-flow.pp-flow2{grid-template-columns:1fr}.pp-flow2 .pp-extras{grid-template-columns:1fr}.sheet-cols{grid-template-columns:1fr}.pp-sheet2 header{grid-template-columns:1fr}.pp-sheet2{padding:18px 14px}}
+.pp-sheet .pfd text.end{text-anchor:end}
