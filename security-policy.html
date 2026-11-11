@@ -21,10 +21,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
-<link rel="stylesheet" href="assets/site-enhance.css?v=20261015d">
+<link rel="stylesheet" href="assets/site-enhance.css?v=20261111">
 <script src="assets/nav.js?v=20261015" defer></script>
 <script src="assets/motion.js?v=20261015g" defer></script>
 <style>
+/* ページの主見出しは h1 にする（見た目は他ページの .compact-heading h2 と同じ） */
+.compact-heading h1{margin:18px 0 0;font:500 clamp(32px,3vw,42px)/1.25 var(--serif,serif)}
 /* このページ固有の調整（規程・条文型レイアウト）
    ※ .blueprint（紺地）は本文が読めなくなるため使用しない。紙面に印刷した規程の見え方に寄せる。 */
 .policy-intro{max-width:860px;font-size:15px;line-height:2.1;color:#4a535c;margin-top:8px}
@@ -44,27 +46,74 @@
   .policy-list .no{padding-top:0}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.tkg-energy.com/security-policy#webpage",
+      "url": "https://www.tkg-energy.com/security-policy",
+      "name": "情報セキュリティ基本方針 | 東京共同技術株式会社",
+      "description": "東京共同技術株式会社の情報セキュリティ基本方針。お客様からお預かりした設計情報・事業計画等の秘密情報の取扱い、生成AI利用時の運用、事故発生時の対応方針を定めています。",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@id": "https://www.tkg-energy.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.tkg-energy.com/security-policy#breadcrumb"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.tkg-energy.com/#organization",
+        "name": "東京共同技術株式会社",
+        "url": "https://www.tkg-energy.com/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.tkg-energy.com/security-policy#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://www.tkg-energy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "情報セキュリティ基本方針",
+          "item": "https://www.tkg-energy.com/security-policy"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body class="antialiased">
 <main>
 <header class="site-header">
-  <a class="brand" href="index.html" aria-label="東京共同技術株式会社 トップ">
+  <a class="brand" href="./" aria-label="東京共同技術株式会社 トップ">
     <img src="assets/logo.png" alt="東京共同技術株式会社 ロゴ">
     <span>東京共同技術株式会社<small>TOKYO KYODO TECHNOLOGY</small></span>
   </a>
   <nav aria-label="メインナビゲーション">
-    <a href="index.html#services">支援領域</a>
-    <a href="index.html#domains">対応領域</a>
+    <a href="./#services">支援領域</a>
+    <a href="./#domains">対応領域</a>
     <a href="owners-engineering">発注者側支援</a>
-    <a href="index.html#company">会社概要</a>
+    <a href="pilot-plant">PoC・実証</a>
+    <a href="incineration">焼却施設</a>
+    <a href="./#company">会社概要</a>
     <a class="nav-lang" href="en" lang="en" hreflang="en">English</a>
-    <a class="nav-cta" href="index.html#contact">お問い合わせ</a>
+    <a class="nav-cta" href="./#contact">お問い合わせ</a>
   </nav>
 </header>
 
 <section class="section" id="top" style="padding-top:120px">
   <div class="compact-heading">
-    <div><span>INFORMATION SECURITY POLICY</span><h2>情報セキュリティ基本方針</h2></div>
+    <div><span>INFORMATION SECURITY POLICY</span><h1>情報セキュリティ基本方針</h1></div>
     <p class="policy-intro">当社は、エネルギー・環境分野の技術支援を業務としており、お客様の事業計画、設計情報、見積条件といった秘密情報をお預かりしています。これらをお預かりできることが事業の前提であると考え、情報セキュリティに関する基本方針を次のとおり定めます。</p>
   </div>
 
@@ -134,10 +183,19 @@
   </div>
   </div>
 
-  <a class="policy-back" href="index.html">← 会社トップへ戻る</a>
+  <a class="policy-back" href="./">← 会社トップへ戻る</a>
 </section>
 
 <footer class="footer">
+  <div class="footer-links" role="navigation" aria-label="サイト内リンク">
+    <a href="./">トップ</a>
+    <a href="owners-engineering">オーナーズエンジニアリング</a>
+    <a href="pilot-plant">PoC・実証プラントの設計与件づくり</a>
+    <a href="incineration">焼却施設の運転幅の見える化</a>
+    <a href="silica">もみ殻由来シリカ</a>
+    <a href="security-policy" aria-current="page">情報セキュリティ基本方針</a>
+    <a href="en" lang="en" hreflang="en">English</a>
+  </div>
   <div class="footer-brand">
     <img src="assets/logo.png" alt="">
     <p>東京共同技術株式会社<small>TOKYO KYODO TECHNOLOGY</small></p>

@@ -40,3 +40,10 @@ nav .nav-cta:hover{background:var(--ink);color:var(--white)}
 .cycle-pin.pin-on .stair-tread{clip-path:inset(calc((1 - var(--s,1)) * (100% + 40px) - 40px) -4px 0 -4px)}
 /* 親に transform/opacity を付けると乗算合成が親の中に閉じて白い四角が出るため、img 自体を動かす */
 .cycle-pin.pin-on .stair-art img{opacity:var(--s,1);transform:translateY(calc((1 - var(--s,1)) * 36px))}
+
+/* 2026-11-11 追加: フッターのサイト内リンク（全ページ共通）。どのページからも各サービスページへ1クリックで行けるようにする */
+.footer{flex-wrap:wrap;row-gap:24px}
+.footer-links{order:-1;width:100%;display:flex;flex-wrap:wrap;gap:8px 26px;padding-bottom:24px;border-bottom:1px solid var(--line);font-size:13px;line-height:1.8}
+.footer-links a{color:var(--muted);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.footer-links a:hover{color:var(--ink);border-bottom-color:var(--gold)}
+.footer-links a[aria-current="page"]{color:var(--ink)}
