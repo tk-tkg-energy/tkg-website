@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
 <link rel="stylesheet" href="assets/oe-visual.css?v=20261015">
 <link rel="stylesheet" href="assets/bp-hero.css?v=20261111">
-<link rel="stylesheet" href="assets/site-enhance.css?v=20261111">
+<link rel="stylesheet" href="assets/site-enhance.css?v=20261111b">
 <script src="assets/nav.js?v=20261015" defer></script>
 <script src="assets/motion.js?v=20261015g" defer></script>
 <style>
@@ -38,6 +38,8 @@
 .oe-note b{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:6px}
 #contact .contact-card h3{font-size:16px;line-height:1.7;white-space:nowrap}
 @media (max-width:900px){.oe-cards{grid-template-columns:1fr}#contact .contact-card h3{white-space:normal}}
+/* 画面幅 981〜1150px では「こういうご相談を受けています。」が左列からはみ出し、右の説明文に重なるため、この幅だけ折り返す */
+@media (981px<=width<=1150px){#consultations .compact-heading h2{white-space:normal}}
 /* company.cssのグローバルルール(.hero-visual を width>=981pxでhero-engineering.png背景に強制置換)から本ページを除外 */
 @media (width>=981px){
   #top .hero-visual{background-image:none!important}
@@ -132,6 +134,76 @@
           "position": 2,
           "name": "オーナーズエンジニアリング",
           "item": "https://www.tkg-energy.com/owners-engineering"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.tkg-energy.com/owners-engineering#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "オーナーズエンジニアリングとは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "プラントを「作る側」ではなく「発注する側」に立ち、メーカー・EPCコントラクターと向き合う技術支援です。設計書や見積の妥当性を判断できる人が社内にいないときに、その役割を案件に必要な範囲で補います。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どの段階から相談できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EPC発注の構想段階からご相談いただけます。発注後の進行管理や、図書レビュー・検査立会いだけを単発でお受けするスポット型もあります。初回のご相談（60分・オンライン）は無料です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "対象となる設備は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LNG等のガス系エネルギー設備、バイオマスプラント、その他エネルギープラント全般です。専門外の一部は外部の専門家に依頼し、その内容を当社がチェックします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "常駐で対応してもらえますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "常駐はしていません。週次のオンライン定例と、図書の非同期レビューを軸に関与します。工場検査や立会検査など、必要な場面では現地へ伺います。全国に対応しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "契約の形はどうなりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "準委任契約です。月間の上限時間を決めて継続的に関与する顧問型と、図書レビューや検査立会いを単発で行うスポット型があります。いずれも秘密保持契約を締結のうえ着手します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "許認可の申請や保安管理も任せられますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "許認可手続・保安管理業務そのものは、事業者および有資格者の業務です。当社はその前段の技術検討と、メーカー・EPCとの折衝を支援します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "誰が担当しますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "代表が全件を担当し、窓口と最終判断も代表が行います。代表は大手エンジニアリング会社で13年間、プラントの機械設計・建設・試運転に従事し、その後、事業会社側で2年間、発注者としてメーカー・EPCと向き合う実務を経験しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "預けた図面や見積の情報は、どう扱われますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "秘密保持契約を締結してからお預かりします。受託業務で知り得た個別情報は守秘義務の対象であり、他の案件に流用することはありません。取扱いの方針は情報セキュリティ基本方針に定めています。"
+          }
         }
       ]
     }
@@ -288,9 +360,49 @@
   </div>
 </section>
 
+<section class="section scope" id="faq">
+  <div class="compact-heading">
+    <div><span>06 / FAQ</span><h2>よくあるご質問。</h2></div>
+  </div>
+  <div class="faq-list">
+    <details>
+      <summary><span class="faq-q">Q1</span><h3>オーナーズエンジニアリングとは何ですか？</h3></summary>
+      <div class="faq-a"><p>プラントを「作る側」ではなく「発注する側」に立ち、メーカー・EPCコントラクターと向き合う技術支援です。設計書や見積の妥当性を判断できる人が社内にいないときに、その役割を案件に必要な範囲で補います。</p></div>
+    </details>
+    <details>
+      <summary><span class="faq-q">Q2</span><h3>どの段階から相談できますか？</h3></summary>
+      <div class="faq-a"><p>EPC発注の構想段階からご相談いただけます。発注後の進行管理や、図書レビュー・検査立会いだけを単発でお受けするスポット型もあります。初回のご相談（60分・オンライン）は無料です。</p></div>
+    </details>
+    <details>
+      <summary><span class="faq-q">Q3</span><h3>対象となる設備は何ですか？</h3></summary>
+      <div class="faq-a"><p>LNG等のガス系エネルギー設備、バイオマスプラント、その他エネルギープラント全般です。専門外の一部は外部の専門家に依頼し、その内容を当社がチェックします。</p></div>
+    </details>
+    <details>
+      <summary><span class="faq-q">Q4</span><h3>常駐で対応してもらえますか？</h3></summary>
+      <div class="faq-a"><p>常駐はしていません。週次のオンライン定例と、図書の非同期レビューを軸に関与します。工場検査や立会検査など、必要な場面では現地へ伺います。全国に対応しています。</p></div>
+    </details>
+    <details>
+      <summary><span class="faq-q">Q5</span><h3>契約の形はどうなりますか？</h3></summary>
+      <div class="faq-a"><p>準委任契約です。月間の上限時間を決めて継続的に関与する顧問型と、図書レビューや検査立会いを単発で行うスポット型があります。いずれも秘密保持契約を締結のうえ着手します。</p></div>
+    </details>
+    <details>
+      <summary><span class="faq-q">Q6</span><h3>許認可の申請や保安管理も任せられますか？</h3></summary>
+      <div class="faq-a"><p>許認可手続・保安管理業務そのものは、事業者および有資格者の業務です。当社はその前段の技術検討と、メーカー・EPCとの折衝を支援します。</p></div>
+    </details>
+    <details>
+      <summary><span class="faq-q">Q7</span><h3>誰が担当しますか？</h3></summary>
+      <div class="faq-a"><p>代表が全件を担当し、窓口と最終判断も代表が行います。代表は大手エンジニアリング会社で13年間、プラントの機械設計・建設・試運転に従事し、その後、事業会社側で2年間、発注者としてメーカー・EPCと向き合う実務を経験しています。</p></div>
+    </details>
+    <details>
+      <summary><span class="faq-q">Q8</span><h3>預けた図面や見積の情報は、どう扱われますか？</h3></summary>
+      <div class="faq-a"><p>秘密保持契約を締結してからお預かりします。受託業務で知り得た個別情報は守秘義務の対象であり、他の案件に流用することはありません。取扱いの方針は<a href="security-policy">情報セキュリティ基本方針</a>に定めています。</p></div>
+    </details>
+  </div>
+</section>
+
 <section class="section company blueprint" id="contact">
   <div class="section-heading">
-    <span>06 / CONTACT</span><h2>お問い合わせ</h2>
+    <span>07 / CONTACT</span><h2>お問い合わせ</h2>
     <p>会社概要は<a href="./#company">会社案内</a>をご覧ください。ほかの支援は<a href="pilot-plant">PoC・実証プラントの設計与件づくり</a>・<a href="incineration">焼却施設の運転幅の見える化</a>をご覧ください。</p>
   </div>
   <div class="company-grid">
