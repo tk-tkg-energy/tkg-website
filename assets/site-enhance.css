@@ -67,3 +67,6 @@ nav .nav-cta:hover{background:var(--ink);color:var(--white)}
   .faq-list summary h3{font-size:15px}
   .faq-list .faq-a{padding:0 6px 22px 42px}
 }
+
+/* 2026-11-11 追加: サービスページ末尾の見出し「お問い合わせ」。PC幅では6字が列幅に収まらず「お問い合わ／せ」と折れていたため、1行に収まる大きさにして折り返さない */
+@media (width>=981px){#contact .section-heading h2{white-space:nowrap;font-size:clamp(40px,4.4vw,62px)}}
