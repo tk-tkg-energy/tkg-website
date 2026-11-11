@@ -24,11 +24,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/oe-visual.css?v=20261015">
 <link rel="stylesheet" href="assets/bp-hero.css?v=20261111">
-<link rel="stylesheet" href="assets/site-enhance.css?v=20261111">
+<link rel="stylesheet" href="assets/site-enhance.css?v=20261111b">
 <script src="assets/nav.js?v=20261015" defer></script>
 <script src="assets/motion.js?v=20261015g" defer></script>
 <style>
+/* 2026-11-11 追加: 冒頭の「こんなとき、ご相談ください。」。カード全体が各サービスページへのリンク（絵と枠は oe-visual.css の .oe-cases） */
+/* 見出しが14字あり、.scope 既定の左列（最大500px）からはみ出して右の説明文に重なるため、左列を広げて折り返しも許す */
+@media (width>=981px){#consultations .compact-heading{grid-template-columns:minmax(360px,640px) minmax(300px,560px)}}
+#consultations .compact-heading h2{white-space:normal;text-wrap:balance}
+.top-cases a{display:block;color:inherit;text-decoration:none}
+.top-cases .case-go{display:inline-block;margin-top:16px;padding-bottom:3px;border-bottom:1px solid var(--gold);font-size:13.5px;font-weight:600;line-height:1.7;color:var(--ink);transition:color .2s}
+.top-cases a:hover .case-go{color:#8a6d1f}
+.top-cases-more{margin:40px 0 0;font-size:13.5px;line-height:2;color:var(--muted)}
+.top-cases-more a{color:var(--ink);border-bottom:1px solid var(--gold)}
 /* 対応領域・実績台帳（このページ固有） */
 /* 3列の内容幅をそろえるため、左右の余白は padding ではなく column-gap で取り、区切り線は ::after で描く
    （以前は両端の列だけ padding が片側0で、真ん中の図版だけ細くなっていた） */
@@ -224,7 +234,7 @@
   </div>
   <div class="bp-copy">
     <p class="bp-eyebrow">ENERGY PROJECTS / TECHNICAL ADVISORY</p>
-    <h1><span>エネルギー事業の判断を、</span><span>技術で支える。</span></h1>
+    <h1><span class="bp-kw">エネルギー事業・プラントの技術コンサルティング</span><span>エネルギー事業の判断を、</span><span>技術で支える。</span></h1>
     <p class="bp-lead">プラントの機械設計・建設・試運転に携わってきた技術者が、発注者の側に立って支援します。<br>構想の整理から事業性の評価、設備の立ち上げまで、必要な局面だけでもご相談いただけます。</p>
     <div class="bp-actions">
       <a class="primary" href="#services">支援領域を見る</a>
@@ -235,13 +245,50 @@
     <span>ADVISORY REVIEW</span>
     <p>図面・見積・工程・事業計画を横断し、次の意思決定に必要な論点を可視化します。</p>
   </div>
-  <a class="bp-scroll" href="#services">SCROLL</a>
+  <a class="bp-scroll" href="#consultations">SCROLL</a>
+</section>
+
+<section class="section scope" id="consultations">
+  <div class="compact-heading">
+    <div><span>01 / CONSULTATIONS</span><h2>こんなとき、ご相談ください。</h2></div>
+    <p>社内に判断できる人がいない技術の論点を、発注者の側に立って一緒に確かめます。当てはまる場面から、支援の内容をご覧ください。</p>
+  </div>
+  <div class="oe-visual oe-cases top-cases">
+    <article>
+      <a href="owners-engineering">
+        <figure><img src="assets/oe-case-quote.jpg" alt="見積書と設計図面の束を虫眼鏡で読み込む手元" width="960" height="640" loading="lazy" decoding="async"></figure>
+        <span>CASE 01 / EPC発注の前に</span>
+        <h3>「この見積・設計書、妥当？」</h3>
+        <p>メーカーやEPCから届いた設計書・見積を、社内で判断できない。</p>
+        <b class="case-go">オーナーズエンジニアリング（発注者側支援）を見る →</b>
+      </a>
+    </article>
+    <article>
+      <a href="pilot-plant">
+        <figure><img src="assets/pp-when1.jpg?v=20261106" alt="実験器具と白紙の方眼紙のあいだで鉛筆を持ったまま止まる手" width="960" height="640" loading="lazy" decoding="async"></figure>
+        <span>CASE 02 / ラボの次の段階で</span>
+        <h3>「予算は付いた。何から決める？」</h3>
+        <p>ラボで成果は出たが、パイロット・実証プラントの設計に何を渡せばよいか分からない。</p>
+        <b class="case-go">PoC・実証プラントの設計与件づくりを見る →</b>
+      </a>
+    </article>
+    <article>
+      <a href="incineration">
+        <figure><img src="assets/inc-voice3.jpg?v=20261106" alt="ごみピットのクレーンと、上限近くを指す計器" width="960" height="640" loading="lazy" decoding="async"></figure>
+        <span>CASE 03 / 焼却施設の運転で</span>
+        <h3>「受入量、どこまで増やせる？」</h3>
+        <p>どの設備が先に限界に来るのかを、数字で説明できない。</p>
+        <b class="case-go">焼却施設の運転幅の見える化を見る →</b>
+      </a>
+    </article>
+  </div>
+  <p class="top-cases-more">このほか、構想の整理、事業性評価（FS）、テクニカルDD、試運転・立ち上げの支援も行っています。<a href="#services">支援領域を見る</a></p>
 </section>
 
 <section class="section scope" id="services">
   <div class="cycle-pin"><div class="cycle-sticky">
   <div class="compact-heading">
-    <div><span>01 / PROJECT CYCLE &amp; SERVICES</span><h2>構想から立ち上げまで。</h2></div>
+    <div><span>02 / PROJECT CYCLE &amp; SERVICES</span><h2>構想から立ち上げまで。</h2></div>
     <p>エネルギー設備を伴うプロジェクトを対象に、構想・検証・事業化・実行を一続きで支援します。必要な局面だけのスポット支援にも対応します。</p>
   </div>
   <ol class="stairs" aria-label="プロジェクトの5段階">
@@ -308,7 +355,7 @@
 
 <section class="section blueprint" id="domains">
   <div class="compact-heading">
-    <div><span>02 / DOMAINS</span><h2>対応する領域。</h2></div>
+    <div><span>03 / DOMAINS</span><h2>対応する領域。</h2></div>
     <p>土台にあるのは、LNG受入基地の設計・試運転で培ったガス系プラントの機械技術です。この技術は、扱う燃料が変わっても共通して使えます。</p>
   </div>
   <div class="domain-grid">
@@ -335,7 +382,7 @@
 
 <section class="section" id="track-record">
   <div class="compact-heading">
-    <div><span>03 / TRACK RECORD</span><h2>取り組んでいる案件。</h2></div>
+    <div><span>04 / TRACK RECORD</span><h2>取り組んでいる案件。</h2></div>
     <p>守秘義務のため、お客様名と数値は掲載していません。進行中の案件は、現在の段階をそのまま記載しています。</p>
   </div>
   <div class="ledger">
@@ -361,7 +408,7 @@
   <p class="ledger-note">上記のほか、エネルギー事業者向けの技術支援を業務委託として受託しています。案件の性質上、内容は公開していません。</p>
 
   <div class="compact-heading" style="margin-top:96px">
-    <div><span>04 / TEAM</span><h2>案件に、必要な専門性を。</h2></div>
+    <div><span>05 / TEAM</span><h2>案件に、必要な専門性を。</h2></div>
     <p>代表に加え、案件に応じて招集する大手エンジニアリング会社出身のシニアエキスパートネットワーク。案件ごとに必要な専門性を組み合わせます。</p>
   </div>
   <div class="advisor-grid">
@@ -398,7 +445,7 @@
 
 <section class="section method blueprint">
   <div class="compact-heading">
-    <div><span>05 / ADVISORY FLOW</span><h2>エンジニアと事業者、双方の視点で。</h2></div>
+    <div><span>06 / ADVISORY FLOW</span><h2>エンジニアと事業者、双方の視点で。</h2></div>
     <p>技術として成立するか。事業として実行できるか。両方の視点から論点を整理し、意思決定と実行を支えます。</p>
   </div>
   <div class="method-grid">
@@ -413,7 +460,7 @@
 
 <section class="section" id="rd">
   <div class="compact-heading">
-    <div><span>06 / IN-HOUSE R&amp;D</span><h2>自ら実装にも取り組む。</h2></div>
+    <div><span>07 / IN-HOUSE R&amp;D</span><h2>自ら実装にも取り組む。</h2></div>
     <p>支援するだけでなく、自社でも研究開発を進めています。進捗を過大に見せず、現在地と次の検証項目を公開します。</p>
   </div>
   <div class="rd-mini">
@@ -429,7 +476,7 @@
 
 <section class="section company blueprint" id="company">
   <div class="section-heading">
-    <span>07 / COMPANY</span><h2>会社概要</h2>
+    <span>08 / COMPANY</span><h2>会社概要</h2>
     <p>少数精鋭のチームで、案件ごとの技術課題に深く向き合います。</p>
   </div>
   <div class="company-grid">
