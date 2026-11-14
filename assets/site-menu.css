@@ -1,0 +1,43 @@
+/* サイトの入口を3つの組にまとめる（2026-11-14）。メニューの「サービス」、トップのサービス一覧、フッタの組分け */
+
+/* 1. メニューの「サービス」（マウスを載せるか、押すと開く。スクリプトは使わない） */
+.site-header nav .nav-svc{position:relative;display:flex;align-items:center}
+.nav-svc-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 0;border:0;border-bottom:1px solid #0000;background:none;font:inherit;color:inherit;letter-spacing:inherit;cursor:pointer}
+.nav-svc-btn::after{content:"";width:6px;height:6px;margin-top:-3px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(45deg)}
+.nav-svc:hover .nav-svc-btn,.nav-svc:focus-within .nav-svc-btn{border-bottom-color:var(--gold)}
+.nav-svc-menu{position:absolute;top:calc(100% + 24px);left:50%;transform:translateX(-50%);display:none;grid-template-columns:repeat(3,auto);gap:0 38px;width:max-content;max-width:92vw;padding:24px 30px 22px;background:#fbfaf5;border:1px solid var(--line);border-top:2px solid var(--blue);box-shadow:0 18px 40px rgba(17,47,76,.16)}
+.nav-svc-menu::before{content:"";position:absolute;left:0;right:0;top:-28px;height:28px}
+.nav-svc:hover .nav-svc-menu,.nav-svc:focus-within .nav-svc-menu{display:grid}
+.nav-svc-menu b{display:block;margin-bottom:6px;padding-bottom:10px;border-bottom:1px solid var(--line);font:400 11px var(--font-label,monospace);letter-spacing:.1em;color:var(--gold);white-space:nowrap}
+.site-header nav .nav-svc-menu a{display:block;padding:9px 0;font-size:14px;white-space:nowrap}
+
+@media (max-width:980px){
+  .site-header nav .nav-svc{display:none}
+  .site-header.nav-open nav .nav-svc{display:block}
+  .nav-svc-btn{display:none}
+  .nav-svc-menu::before{display:none}
+  .site-header.nav-open .nav-svc-menu{position:static;transform:none;display:block;width:auto;max-width:none;padding:0;border:0;background:none;box-shadow:none}
+  .site-header.nav-open .nav-svc-menu b{margin:20px 0 0;padding:0 2px 8px}
+  .site-header.nav-open nav .nav-svc-menu a{white-space:normal}
+}
+
+/* 2. トップのサービス一覧 */
+.svc-entry{margin-top:70px}
+.svc-entry-lead{margin:0 0 22px;font-size:15px;color:var(--muted)}
+.svc-entry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;border-top:2px solid var(--blue)}
+.svc-entry-grid>div{padding-top:20px}
+.svc-entry-grid span{font:11px var(--font-label,monospace);letter-spacing:.12em;color:var(--gold)}
+.svc-entry-grid h3{margin:8px 0 16px;font:600 21px/1.5 var(--serif,serif);color:var(--blue)}
+.svc-entry-grid a{display:block;margin-bottom:12px;padding:16px 18px;border:1px solid var(--line);background:var(--white);transition:border-color .2s,box-shadow .2s}
+.svc-entry-grid a:hover{border-color:var(--gold);box-shadow:0 8px 20px rgba(17,47,76,.08)}
+.svc-entry-grid a b{display:block;font-size:15.5px;line-height:1.6}
+.svc-entry-grid a b::after{content:"　→";color:var(--gold)}
+.svc-entry-grid a small{display:block;margin-top:6px;font-size:13px;line-height:1.8;color:var(--muted)}
+@media (max-width:980px){.svc-entry-grid{grid-template-columns:1fr;gap:8px}}
+
+/* 3. フッタの組分け */
+.footer-links.footer-groups{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 36px;align-items:start}
+.footer-groups>div{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.footer-groups b{margin-bottom:8px;font:400 11px var(--font-label,monospace);letter-spacing:.1em;color:var(--gold)}
+@media (max-width:980px){.footer-links.footer-groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.footer-links.footer-groups{grid-template-columns:1fr}}

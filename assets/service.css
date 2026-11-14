@@ -7,15 +7,15 @@
 .svc-map article{border-right:1px solid var(--line);padding:0 16px 22px;position:relative}
 .svc-map article:last-child{border-right:0}
 .svc-map h3{margin:0 -16px 18px;padding:16px;font-size:16px;background:var(--blue);color:#fff;line-height:1.4}
-.svc-map h3 small{display:block;font:11px monospace;color:#c8b27a;letter-spacing:.1em;margin-bottom:4px}
+.svc-map h3 small{display:block;font:11px var(--font-label,monospace);color:#c8b27a;letter-spacing:.1em;margin-bottom:4px}
 .svc-map dl{margin:0}
-.svc-map dt{font:11px monospace;color:var(--gold);letter-spacing:.1em;margin-top:16px}
+.svc-map dt{font:11px var(--font-label,monospace);color:var(--gold);letter-spacing:.1em;margin-top:16px}
 .svc-map dd{margin:6px 0 0;font-size:14px;line-height:1.8}
 .svc-map dd.pain{font-weight:600}
 .svc-check{max-width:900px}
 .svc-check ol{list-style:none;padding:0;margin:0;counter-reset:q}
 .svc-check li{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;border-bottom:1px solid var(--line);padding:14px 0;counter-increment:q}
-.svc-check li::before{content:counter(q,decimal-leading-zero);font:13px monospace;color:var(--gold)}
+.svc-check li::before{content:counter(q,decimal-leading-zero);font:13px var(--font-label,monospace);color:var(--gold)}
 .svc-check li span{font-size:15px;line-height:1.8}
 .svc-check .yn{display:flex;gap:6px}
 .svc-check .yn button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--white);padding:6px 14px;cursor:pointer;color:var(--ink)}
@@ -23,12 +23,12 @@
 .svc-result{margin-top:26px;border-left:3px solid var(--gold);padding:14px 20px;font-size:15px;line-height:1.9;min-height:3em}
 .svc-two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .svc-two article{border:1px solid var(--line);background:var(--white);padding:26px 24px}
-.svc-two span{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:10px}
+.svc-two span{font:11px var(--font-label,monospace);color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:10px}
 .svc-two h3{margin:0 0 10px;font-size:18px;line-height:1.5}
 .svc-two p{margin:0;font-size:14px;line-height:1.95;color:var(--muted)}
 .svc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;list-style:none;padding:0;margin:0;counter-reset:s}
 .svc-steps li{border-top:2px solid var(--blue);padding-top:14px;counter-increment:s;font-size:15px;line-height:1.8}
-.svc-steps li::before{content:"STEP " counter(s);display:block;font:11px monospace;color:var(--gold);letter-spacing:.12em;margin-bottom:6px}
+.svc-steps li::before{content:"STEP " counter(s);display:block;font:11px var(--font-label,monospace);color:var(--gold);letter-spacing:.12em;margin-bottom:6px}
 .svc-steps b{display:block;font-size:17px;margin-bottom:4px}
 .svc-note{border-left:2px solid var(--gold);padding:14px 20px;margin-top:32px;font-size:13.5px;line-height:2;color:var(--muted);max-width:860px}
 .svc-page #contact .contact-card h3{font-size:16px;line-height:1.7}
@@ -43,7 +43,7 @@
 .svc-cases article{border-top:2px solid var(--blue);padding-top:4px}
 .svc-cases figure{margin:0 0 14px;aspect-ratio:3/2;overflow:hidden;background:#fff}
 .svc-cases figure img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;display:block}
-.svc-cases span{font:11px monospace;color:var(--gold);letter-spacing:.12em}
+.svc-cases span{font:11px var(--font-label,monospace);color:var(--gold);letter-spacing:.12em}
 .svc-cases h3{margin:8px 0 6px;font-size:20px;line-height:1.5}
 .svc-cases p{margin:0;font-size:14px;color:var(--muted)}
 
@@ -53,7 +53,7 @@
 /* ===== 約束（性分 → だから）と番号付きの流れ（2026-11-06） ===== */
 .svc-promise{list-style:none;margin:0;padding:0;counter-reset:pr;border-top:2px solid var(--blue)}
 .svc-promise>li{counter-increment:pr;display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:56px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line)}
-.svc-promise .pr-no{font:11px monospace;color:var(--gold);letter-spacing:.14em}
+.svc-promise .pr-no{font:11px var(--font-label,monospace);color:var(--gold);letter-spacing:.14em}
 .svc-promise .pr-no::after{content:" " counter(pr,decimal-leading-zero)}
 .svc-promise .pr-fact{margin:12px 0 0;padding:10px 16px;background:#f1eee6;font-size:16px;line-height:1.8;color:#3d4750;max-width:640px}
 .svc-promise .pr-so::before{content:"↓ "}
@@ -63,7 +63,7 @@
 .svc-win{margin:0;background:#fff;border:1px solid #d9d4c6;box-shadow:0 10px 26px rgba(17,47,76,.10)}
 .svc-win figcaption{display:flex;align-items:center;gap:8px;padding:7px 12px;background:#f1eee6;border-bottom:1px solid #d9d4c6;font-size:11.5px;color:var(--muted)}
 .svc-win figcaption::before{content:"";width:8px;height:8px;border:1.5px solid var(--gold);border-radius:2px}
-.svc-win figcaption em{margin-left:auto;font-style:normal;font:10.5px monospace;color:#9a9486}
+.svc-win figcaption em{margin-left:auto;font-style:normal;font:10.5px var(--font-label,monospace);color:#9a9486}
 .svc-win .wb{padding:14px 16px;min-height:150px;display:grid;align-content:center}
 .svc-win .wb img{width:100%;height:auto;display:block}
 .svc-win .wb svg{width:100%;height:auto;display:block}
@@ -83,7 +83,7 @@
 .svc-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:22px;position:relative}
 .svc-flow::before{content:"";position:absolute;top:23px;left:24px;right:calc(20% - 24px);border-top:1px solid var(--gold)}
 .svc-flow li{position:relative}
-.svc-flow .no{position:relative;z-index:1;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--blue);color:var(--gold);border:1px solid var(--gold);font:13px monospace}
+.svc-flow .no{position:relative;z-index:1;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--blue);color:var(--gold);border:1px solid var(--gold);font:13px var(--font-label,monospace)}
 .svc-flow h3{margin:16px 0 6px;font:600 17px/1.5 var(--serif,serif);color:var(--blue)}
 .svc-flow p{margin:0;font-size:13.5px;line-height:1.85;color:var(--muted)}
 .svc-flow .get{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--line);font-size:12.5px;line-height:1.7;color:var(--ink)}

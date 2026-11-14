@@ -6,7 +6,7 @@
 .pp-steps{list-style:none;margin:0;padding:0;position:relative}
 .pp-steps::before{content:"";position:absolute;left:19px;top:20px;bottom:40px;border-left:2px dashed rgba(200,178,122,.6)}
 .pp-steps li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:start;padding:0 0 26px}
-.pp-steps i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:600 13px monospace;font-style:normal;background:#112f4c;border:2px solid #c8b27a;color:#c8b27a;z-index:1}
+.pp-steps i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:600 13px var(--font-label,monospace);font-style:normal;background:#112f4c;border:2px solid #c8b27a;color:#c8b27a;z-index:1}
 .pp-steps b{display:block;color:#fff;font-size:17px;line-height:1.4;margin-top:8px}
 .pp-steps span{display:block;color:#c0cad2;font-size:13.5px;line-height:1.7;margin-top:4px}
 .pp-steps li.out i{background:#c8b27a;color:#112f4c}
@@ -15,9 +15,9 @@
 .pp-sheet{margin:0;background:#fbfaf5;color:var(--ink);padding:26px 28px 24px;box-shadow:0 22px 50px rgba(0,0,0,.35);position:relative}
 .pp-sheet::after{content:"見本";position:absolute;top:14px;right:-10px;background:#c8b27a;color:#112f4c;font-size:12px;font-weight:700;padding:3px 10px}
 .pp-sheet header{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--blue);padding-bottom:10px;margin-bottom:12px;flex-wrap:wrap}
-.pp-sheet header small{font:11px monospace;color:var(--gold);letter-spacing:.08em;width:100%}
+.pp-sheet header small{font:11px var(--font-label,monospace);color:var(--gold);letter-spacing:.08em;width:100%}
 .pp-sheet header b{font-size:20px;color:var(--blue)}
-.pp-sheet header em{margin-left:auto;font-style:normal;font:12px monospace;color:var(--muted);border:1px solid var(--line);padding:1px 8px}
+.pp-sheet header em{margin-left:auto;font-style:normal;font:12px var(--font-label,monospace);color:var(--muted);border:1px solid var(--line);padding:1px 8px}
 .pp-sheet h4{margin:14px 0 6px;font-size:13.5px;color:var(--blue)}
 .pp-sheet table{width:100%;border-collapse:collapse;font-size:13px}
 .pp-sheet th,.pp-sheet td{border-bottom:1px solid #e3ded0;padding:5px 4px;text-align:left;font-weight:400}
@@ -32,7 +32,7 @@
 .pp-extras{display:grid;gap:18px}
 .blueprint .svc-note{color:#c0cad2}
 .pp-x{border:1px solid rgba(200,178,122,.45);background:rgba(255,255,255,.05);padding:18px 18px 16px;color:#e9edf2}
-.pp-x small{display:block;font:11px monospace;color:#c8b27a;letter-spacing:.1em;margin-bottom:10px}
+.pp-x small{display:block;font:11px var(--font-label,monospace);color:#c8b27a;letter-spacing:.1em;margin-bottom:10px}
 .pp-x b{display:block;font-size:16px}
 .pp-x p{margin:8px 0 0;font-size:13px;line-height:1.75;color:#c0cad2}
 .pp-x svg{width:100%;height:auto;display:block;margin-top:8px}
@@ -61,7 +61,7 @@
 .pp-meter-note{font-size:12px;color:var(--muted);margin:14px 0 0;line-height:1.7}
 .pp-qs{list-style:none;padding:0;margin:0;counter-reset:q}
 .pp-qs li{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0;counter-increment:q}
-.pp-qs li::before{content:counter(q,decimal-leading-zero);font:13px monospace;color:var(--gold)}
+.pp-qs li::before{content:counter(q,decimal-leading-zero);font:13px var(--font-label,monospace);color:var(--gold)}
 .pp-qs li.grp{display:block;counter-increment:none;border-bottom:2px solid var(--blue);padding:22px 0 8px;font-weight:700;font-size:15px;color:var(--blue)}
 .pp-qs li.grp:first-child{padding-top:0}
 .pp-qs li.grp::before{content:none}
@@ -75,7 +75,7 @@
 .pp-phases article{position:relative;background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column}
 .pp-phases article:not(:last-child)::after{content:"";position:absolute;right:-31px;top:44px;width:18px;height:18px;border-top:3px solid var(--gold);border-right:3px solid var(--gold);transform:rotate(45deg)}
 .pp-phases header{background:var(--blue);color:#fff;padding:16px 20px}
-.pp-phases header small{display:block;font:11px monospace;color:#c8b27a;letter-spacing:.12em}
+.pp-phases header small{display:block;font:11px var(--font-label,monospace);color:#c8b27a;letter-spacing:.12em}
 .pp-phases header b{display:block;font-size:18px;margin:2px 0}
 .pp-phases header span{font-size:13px;color:#c0cad2}
 .pp-sample{min-height:170px;margin:18px 20px 0;background:#f1eee6;display:grid;place-items:center;padding:14px;overflow:hidden}
@@ -119,13 +119,13 @@
 .pp-flow.pp-flow2{grid-template-columns:minmax(200px,.72fr) minmax(460px,1.75fr) minmax(210px,.78fr);gap:36px}
 .pp-sheet2{padding:22px 24px;background:#fbfaf5}
 .pp-sheet2 header{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end;border-bottom:2px solid var(--blue);padding-bottom:10px;margin-bottom:6px}
-.pp-sheet2 .tb-title small{display:block;font:11px monospace;color:var(--gold);letter-spacing:.08em}
+.pp-sheet2 .tb-title small{display:block;font:11px var(--font-label,monospace);color:var(--gold);letter-spacing:.08em}
 .pp-sheet2 .tb-title b{font-size:19px;color:var(--blue)}
 .pp-sheet2 table.tb-stamp{width:auto;font-size:10.5px;border-collapse:collapse}
 .pp-sheet2 .tb-stamp th,.pp-sheet2 .tb-stamp td{border:1px solid #cfc9b8;padding:2px 6px;width:auto;color:var(--muted);background:#fff}
 .pp-sheet2 .tb-stamp td{min-width:34px;color:var(--ink)}
 .pp-sheet2 h4{display:flex;align-items:center;gap:8px;margin:14px 0 6px;font-size:13.5px;color:var(--blue)}
-.pp-sheet2 h4 span{display:inline-grid;place-items:center;width:18px;height:18px;background:var(--blue);color:#fff;font:11px monospace}
+.pp-sheet2 h4 span{display:inline-grid;place-items:center;width:18px;height:18px;background:var(--blue);color:#fff;font:11px var(--font-label,monospace)}
 .pp-sheet2 svg.pfd{max-height:none;background:#fff;border:1px solid #e1dccd;padding:6px 4px;box-sizing:border-box}
 .pfd .pl{fill:none;stroke:#112f4c;stroke-width:1.8}
 .pfd .st{fill:none;stroke:#c0603a;stroke-width:1.5;stroke-dasharray:4 3}
@@ -136,20 +136,20 @@
 .pfd .eqf{fill:#112f4c}
 .pfd .tr{stroke:#8a9aa8;stroke-width:1.2}
 .pp-sheet .pfd text{font-size:10px;text-anchor:middle;fill:#5e6871}
-.pp-sheet .pfd text.tg{font:600 9.5px monospace;fill:#112f4c}
+.pp-sheet .pfd text.tg{font:600 9.5px var(--font-label,monospace);fill:#112f4c}
 .pp-sheet .pfd text.st-t{fill:#c0603a;text-anchor:start}
 .pp-sheet .pfd text.cw-t{fill:#2f7f95;text-anchor:start}
 .pp-sheet .pfd .cf rect{fill:#b4933e;stroke:none}
 .pp-sheet .pfd .cf path{stroke:#b4933e;stroke-width:1.4;fill:none}
 .pp-sheet .pfd .cf text{fill:#fff;font-size:10.5px;font-weight:700}
 .pp-sheet .pfd .sn path{fill:#fff;stroke:#b4933e;stroke-width:1.2}
-.pp-sheet .pfd .sn text{font:600 8px monospace;fill:#b4933e}
+.pp-sheet .pfd .sn text{font:600 8px var(--font-label,monospace);fill:#b4933e}
 .pp-sheet2 table.stream{margin-top:6px;font-size:11.5px;background:#fff}
 .pp-sheet .stream th,.pp-sheet .stream td{padding:4px 3px}
 .pp-sheet2 .stream th{width:auto;white-space:nowrap;color:var(--muted);font-size:11px}
 .pp-sheet2 .stream td{text-align:center;color:#8a8576}
 .pp-sheet2 .stream i{display:inline-grid;place-items:center;width:14px;height:14px;border:1px solid #b4933e;transform:rotate(45deg);font-style:normal}
-.pp-sheet2 .stream i em{transform:rotate(-45deg);font:600 9px/1 monospace;color:#b4933e;font-style:normal}
+.pp-sheet2 .stream i em{transform:rotate(-45deg);font:600 9px/1 var(--font-label,monospace);color:#b4933e;font-style:normal}
 .sheet-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .pp-sheet2 table.cond{font-size:12px}
 .pp-sheet2 .cond th{width:46%}

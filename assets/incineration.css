@@ -5,15 +5,15 @@
 .inc-cols{position:relative;display:grid;grid-template-columns:repeat(6,1fr)}
 .inc-eq{position:relative;margin:0 0 12px;height:190px;display:grid;place-items:center}
 .inc-eq img{width:100%;max-width:190px;height:auto;display:block;mix-blend-mode:screen}
-.inc-eq b{position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#c8b27a;color:#112f4c;font:600 12px/24px monospace;text-align:center}
+.inc-eq b{position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#c8b27a;color:#112f4c;font:600 12px/24px var(--font-label,monospace);text-align:center}
 .inc-cols h3,.inc-cols .pain,.inc-cols dl{position:relative}
 .inc-cols article{padding:8px 14px 6px;border-right:1px solid rgba(255,255,255,.12);color:#e9edf2}
 .inc-cols article:last-child{border-right:0}
 .inc-cols h3{margin:0 0 8px;font-size:16px;line-height:1.4;color:#fff}
-.inc-cols h3 small{display:block;font:11px monospace;color:#c8b27a;letter-spacing:.1em;margin-bottom:2px}
+.inc-cols h3 small{display:block;font:11px var(--font-label,monospace);color:#c8b27a;letter-spacing:.1em;margin-bottom:2px}
 .inc-cols .pain{margin:0 0 10px;font-size:14px;font-weight:600;line-height:1.6;color:#f2dfae}
 .inc-cols dl{margin:0}
-.inc-cols dt{font:11px monospace;color:#c8b27a;letter-spacing:.06em;margin-top:8px}
+.inc-cols dt{font:11px var(--font-label,monospace);color:#c8b27a;letter-spacing:.06em;margin-top:8px}
 .inc-cols dd{margin:3px 0 0;font-size:13px;line-height:1.7;color:#c0cad2}
 
 /* 03 レポート見本（明るい背景の上に置くので手順の色を反転） */

@@ -3,7 +3,7 @@
 .oe-visual figure{margin:0 0 18px;aspect-ratio:3/2;overflow:hidden}
 .oe-visual img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;display:block;transition:transform .6s ease}
 .oe-visual article:hover img,.oe-visual li:hover img{transform:scale(1.04)}
-.oe-visual span{font:11px monospace;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:8px}
+.oe-visual span{font:11px var(--font-label,monospace);color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:8px}
 .oe-visual h3{margin:0 0 6px;font:500 20px/1.5 var(--serif,serif)}
 .oe-visual p{margin:0;font-size:13.5px;line-height:1.8;color:var(--muted)}
 .oe-cases{grid-template-columns:repeat(3,minmax(0,1fr))}

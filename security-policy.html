@@ -17,11 +17,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.tkg-energy.com/security-policy">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="assets/company.css?v=20261015">
+<link rel="stylesheet" href="assets/company.css?v=20261114">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
-<link rel="stylesheet" href="assets/site-enhance.css?v=20261111c">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/site-enhance.css?v=20261114">
+<link rel="stylesheet" href="assets/site-menu.css?v=20261114">
+<link rel="stylesheet" href="assets/site-font.css?v=20261114">
 <script src="assets/nav.js?v=20261015" defer></script>
 <script src="assets/motion.js?v=20261015g" defer></script>
 <style>
@@ -100,11 +102,12 @@
     <span>東京共同技術株式会社<small>TOKYO KYODO TECHNOLOGY</small></span>
   </a>
   <nav aria-label="メインナビゲーション">
-    <a href="./#services">支援領域</a>
+    <div class="nav-svc">
+      <button type="button" class="nav-svc-btn" aria-haspopup="true">サービス</button>
+      <div class="nav-svc-menu"><div><b>これから建てる・買う</b><a href="owners-engineering">オーナーズエンジニアリング</a><a href="pilot-plant">PoC・実証プラントの設計与件づくり</a></div><div><b>いまの設備と技術を活かす</b><a href="incineration">焼却施設の運転幅の見える化</a><a href="handover">設計技術の引き継ぎ教材づくり</a></div><div><b>自社で取り組む技術</b><a href="biochar">バイオ炭の製造と事業化</a><a href="silica">もみ殻由来シリカ</a></div></div>
+    </div>
     <a href="./#domains">対応領域</a>
-    <a href="owners-engineering">発注者側支援</a>
-    <a href="pilot-plant">PoC・実証</a>
-    <a href="incineration">焼却施設</a>
+    <a href="./#track-record">実績・体制</a>
     <a href="./#company">会社概要</a>
     <a class="nav-lang" href="en" lang="en" hreflang="en">English</a>
     <a class="nav-cta" href="./#contact">お問い合わせ</a>
@@ -144,7 +147,7 @@
       <div class="no">04</div>
       <div>
         <h3>お預かりした情報の取扱い</h3>
-        <p>お客様から受領した資料は、当社が作成した資料とは分けて保管し、業務上必要な範囲に限って取扱います。生成AIを業務に用いる場合も、お客様の秘密情報を外部のAIサービスに入力しない運用としています。</p>
+        <p>お客様から受領した資料は、当社が作成した資料とは分けて保管し、業務上必要な範囲に限って取扱います。お客様の秘密情報を外部のAIサービスに入力するのは、事前にお客様のご了解をいただいた場合に限ります。その場合も、入力した内容がAIの学習に使われない契約または設定のサービスだけを使い、使うサービスの名前をお伝えします。ご了解をいただけない場合は、AIサービスを使わない方法で業務を行います。</p>
       </div>
     </article>
     <article>
@@ -178,7 +181,7 @@
   </div>
 
   <div class="policy-sign">
-    <small>制定日　2026年8月28日</small>
+    <small>制定日　2026年8月28日<br>改定日　2026年11月14日（04 お預かりした情報の取扱い）</small>
     <b>東京共同技術株式会社<br>代表取締役</b>
   </div>
   </div>
@@ -187,15 +190,11 @@
 </section>
 
 <footer class="footer">
-  <div class="footer-links" role="navigation" aria-label="サイト内リンク">
-    <a href="./">トップ</a>
-    <a href="owners-engineering">オーナーズエンジニアリング</a>
-    <a href="pilot-plant">PoC・実証プラントの設計与件づくり</a>
-    <a href="incineration">焼却施設の運転幅の見える化</a>
-    <a href="biochar">バイオ炭の製造と事業化</a>
-    <a href="silica">もみ殻由来シリカ</a>
-    <a href="security-policy" aria-current="page">情報セキュリティ基本方針</a>
-    <a href="en" lang="en" hreflang="en">English</a>
+  <div class="footer-links footer-groups" role="navigation" aria-label="サイト内リンク">
+    <div><b>これから建てる・買う</b><a href="owners-engineering">オーナーズエンジニアリング</a><a href="pilot-plant">PoC・実証プラントの設計与件づくり</a></div>
+    <div><b>いまの設備と技術を活かす</b><a href="incineration">焼却施設の運転幅の見える化</a><a href="handover">設計技術の引き継ぎ教材づくり</a></div>
+    <div><b>自社で取り組む技術</b><a href="biochar">バイオ炭の製造と事業化</a><a href="silica">もみ殻由来シリカ</a></div>
+    <div><b>会社</b><a href="./">トップ</a><a href="security-policy" aria-current="page">情報セキュリティ基本方針</a><a href="privacy-policy">プライバシーポリシー</a><a href="https://www.youtube.com/@TokyoKyodoTechnology" target="_blank" rel="noopener">YouTube チャンネル</a><a href="en" lang="en" hreflang="en">English</a></div>
   </div>
   <div class="footer-brand">
     <img src="assets/logo.png" alt="">

@@ -22,7 +22,7 @@
 .bp-shade{position:absolute;inset:0;background:linear-gradient(90deg,#0a1f38f5 0%,#0a1f38e6 34%,#0a1f3880 56%,#0a1f3800 78%),linear-gradient(0deg,#0a1f38b3 0%,#0a1f3800 30%)}
 /* コピー */
 .bp-copy{position:relative;z-index:2;width:min(640px,100%);padding:56px 0 72px 6vw}
-.bp-eyebrow{margin:0 0 30px;padding-bottom:14px;border-bottom:1px solid #ffffff2e;font:12px/1.4 monospace;letter-spacing:.14em;color:#d8bb6a;max-width:420px}
+.bp-eyebrow{margin:0 0 30px;padding-bottom:14px;border-bottom:1px solid #ffffff2e;font:12px/1.4 var(--font-label,monospace);letter-spacing:.14em;color:#d8bb6a;max-width:420px}
 .bp-copy h1{margin:0;font:500 clamp(40px,4.6vw,68px)/1.25 var(--serif,serif);letter-spacing:-.01em;color:#fff}
 .bp-copy h1 span{display:block;white-space:nowrap}
 .bp-lead{margin:30px 0 36px;font-size:16px;line-height:2.05;color:#d3dbe3;max-width:540px}
@@ -42,9 +42,9 @@
 @keyframes bp-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 /* 右下の小窓とスクロール案内 */
 .bp-caption{position:absolute;z-index:2;right:4vw;bottom:40px;max-width:360px;padding:16px 20px;border-left:2px solid #b4933e;background:#0a1f38b8;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:bp-rise .9s cubic-bezier(.2,.7,.2,1) 1.3s both}
-.bp-caption span{display:block;font:11px monospace;letter-spacing:.12em;color:#d8bb6a;margin-bottom:6px}
+.bp-caption span{display:block;font:11px var(--font-label,monospace);letter-spacing:.12em;color:#d8bb6a;margin-bottom:6px}
 .bp-caption p{margin:0;font-size:13px;line-height:1.85;color:#d3dbe3}
-.bp-scroll{position:absolute;z-index:2;left:6vw;bottom:28px;font:10px monospace;letter-spacing:.24em;color:#ffffffa6;padding-left:22px}
+.bp-scroll{position:absolute;z-index:2;left:6vw;bottom:28px;font:10px var(--font-label,monospace);letter-spacing:.24em;color:#ffffffa6;padding-left:22px}
 .bp-scroll::before{content:"";position:absolute;left:0;top:-2px;width:1px;height:16px;background:#ffffffa6;animation:bp-tick 2.2s ease-in-out infinite}
 @keyframes bp-tick{0%,100%{transform:translateY(-4px);opacity:.2}50%{transform:translateY(4px);opacity:1}}
 @media (width<=980px){
@@ -75,5 +75,5 @@
 .bp-copy h1 .bp-kw~span:nth-child(2){animation:bp-rise .9s cubic-bezier(.2,.7,.2,1) .45s both}
 .bp-copy h1 .bp-kw~span:nth-child(3){animation:bp-rise .9s cubic-bezier(.2,.7,.2,1) .6s both}
 /* 英語ページ: これまでの .bp-eyebrow の行をそのまま h1 の中へ移したもの（見た目は .bp-eyebrow と同じ） */
-.bp-copy h1 span.bp-kw.bp-kw-eyebrow{margin:0 0 30px;padding-bottom:14px;border-bottom:1px solid #ffffff2e;font:12px/1.4 monospace;letter-spacing:.14em;color:#d8bb6a;max-width:420px;animation-delay:.25s}
+.bp-copy h1 span.bp-kw.bp-kw-eyebrow{margin:0 0 30px;padding-bottom:14px;border-bottom:1px solid #ffffff2e;font:12px/1.4 var(--font-label,monospace);letter-spacing:.14em;color:#d8bb6a;max-width:420px;animation-delay:.25s}
 @media (width<=560px){.bp-copy h1 span.bp-kw{font-size:13px;margin-bottom:12px;letter-spacing:.04em;text-wrap:balance}.bp-copy h1 span.bp-kw.bp-kw-eyebrow{font-size:12px;margin-bottom:30px;letter-spacing:.14em}}

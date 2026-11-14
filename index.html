@@ -20,13 +20,15 @@
 <link rel="alternate" hreflang="en" href="https://www.tkg-energy.com/en">
 <link rel="alternate" hreflang="x-default" href="https://www.tkg-energy.com/">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="assets/company.css?v=20261015">
+<link rel="stylesheet" href="assets/company.css?v=20261114">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
-<link rel="stylesheet" href="assets/oe-visual.css?v=20261015">
-<link rel="stylesheet" href="assets/bp-hero.css?v=20261111">
-<link rel="stylesheet" href="assets/site-enhance.css?v=20261111c">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/oe-visual.css?v=20261114">
+<link rel="stylesheet" href="assets/bp-hero.css?v=20261114">
+<link rel="stylesheet" href="assets/site-enhance.css?v=20261114">
+<link rel="stylesheet" href="assets/site-menu.css?v=20261114">
+<link rel="stylesheet" href="assets/site-font.css?v=20261114">
 <script src="assets/nav.js?v=20261015" defer></script>
 <script src="assets/motion.js?v=20261015g" defer></script>
 <style>
@@ -207,12 +209,11 @@
     <span>東京共同技術株式会社<small>TOKYO KYODO TECHNOLOGY</small></span>
   </a>
   <nav aria-label="メインナビゲーション">
-    <a href="#services">支援領域</a>
+    <div class="nav-svc">
+      <button type="button" class="nav-svc-btn" aria-haspopup="true">サービス</button>
+      <div class="nav-svc-menu"><div><b>これから建てる・買う</b><a href="owners-engineering">オーナーズエンジニアリング</a><a href="pilot-plant">PoC・実証プラントの設計与件づくり</a></div><div><b>いまの設備と技術を活かす</b><a href="incineration">焼却施設の運転幅の見える化</a><a href="handover">設計技術の引き継ぎ教材づくり</a></div><div><b>自社で取り組む技術</b><a href="biochar">バイオ炭の製造と事業化</a><a href="silica">もみ殻由来シリカ</a></div></div>
+    </div>
     <a href="#domains">対応領域</a>
-    <a href="owners-engineering">発注者側支援</a>
-    <a href="pilot-plant">PoC・実証</a>
-    <a href="incineration">焼却施設</a>
-    <a href="biochar">バイオ炭</a>
     <a href="#track-record">実績・体制</a>
     <a href="#company">会社概要</a>
     <a class="nav-lang" href="en" lang="en" hreflang="en">English</a>
@@ -240,7 +241,7 @@
     <h1><span class="bp-kw">エネルギー事業・プラントの技術コンサルティング</span><span>エネルギー事業の判断を、</span><span>技術で支える。</span></h1>
     <p class="bp-lead">プラントの機械設計・建設・試運転に携わってきた技術者が、発注者の側に立って支援します。<br>構想の整理から事業性の評価、設備の立ち上げまで、必要な局面だけでもご相談いただけます。</p>
     <div class="bp-actions">
-      <a class="primary" href="#services">支援領域を見る</a>
+      <a class="primary" href="#service-list">サービス一覧を見る</a>
       <a class="secondary" href="#domains">対応領域を見る</a>
     </div>
   </div>
@@ -346,13 +347,13 @@
     <span>FOR</span>
     <p>事業会社</p><p>新規参入企業</p><p>技術系スタートアップ</p><p>金融機関・投資ファンド</p><p>自治体</p>
   </div>
-  <div class="rd-copy" style="margin-top:2rem">
-    <p>EPC発注を控える事業者の皆様には、発注者側に立つ技術支援（オーナーズエンジニアリング）として、設計図書のレビュー、見積の妥当性診断、進行管理、立会検査を個別に提供しています。</p>
-    <a href="owners-engineering">オーナーズエンジニアリング（発注者側支援）を見る →</a>
-    <p>ラボで成果の出た技術をパイロット・実証プラントへ進める段階では、実験データから設計与件書をまとめ、パイロットで確かめる項目と判断条件を決めます。</p>
-    <a href="pilot-plant">PoC・実証プラントの設計与件づくりを見る →</a>
-    <p>焼却施設をお持ちの事業者さまには、受入量の余裕や設備ごとの限界を、運転記録と設計の計算で数字にする支援を行っています。</p>
-    <a href="incineration">焼却施設の運転幅の見える化を見る →</a>
+  <div class="svc-entry" id="service-list">
+    <p class="svc-entry-lead">サービスの一覧です。いまの場面に近いものからご覧ください。</p>
+    <div class="svc-entry-grid">
+    <div><span>FOR OWNERS</span><h3>これから建てる・買う</h3><a href="owners-engineering"><b>オーナーズエンジニアリング</b><small>EPC発注の前に。設計図書のレビュー、見積の妥当性診断、進行管理、立会検査</small></a><a href="pilot-plant"><b>PoC・実証プラントの設計与件づくり</b><small>ラボの次の段階で。実験データから設計与件書をまとめ、確かめる項目と判断条件を決める</small></a></div>
+    <div><span>FOR OPERATORS</span><h3>いまの設備と技術を活かす</h3><a href="incineration"><b>焼却施設の運転幅の見える化</b><small>受入量の余裕と設備ごとの限界を、運転記録と設計の計算で数字にする</small></a><a href="handover"><b>設計技術の引き継ぎ教材づくり</b><small>設計条件の値の理由と、見る所と打つ手を、数分の動く図の教材にする</small></a></div>
+    <div><span>OWN DEVELOPMENT</span><h3>自社で取り組む技術</h3><a href="biochar"><b>バイオ炭の製造と事業化</b><small>地域で出る残渣をバイオ炭にして、土づくりとJ-クレジットにつなげる事業を組み立てる</small></a><a href="silica"><b>もみ殻由来シリカ</b><small>もみ殻からシリカを抽出し、表面設計で機能性素材へつなげる自社R&D</small></a></div>
+    </div>
   </div>
 </section>
 
@@ -505,15 +506,11 @@
 </section>
 
 <footer class="footer">
-  <div class="footer-links" role="navigation" aria-label="サイト内リンク">
-    <a href="./" aria-current="page">トップ</a>
-    <a href="owners-engineering">オーナーズエンジニアリング</a>
-    <a href="pilot-plant">PoC・実証プラントの設計与件づくり</a>
-    <a href="incineration">焼却施設の運転幅の見える化</a>
-    <a href="biochar">バイオ炭の製造と事業化</a>
-    <a href="silica">もみ殻由来シリカ</a>
-    <a href="security-policy">情報セキュリティ基本方針</a>
-    <a href="en" lang="en" hreflang="en">English</a>
+  <div class="footer-links footer-groups" role="navigation" aria-label="サイト内リンク">
+    <div><b>これから建てる・買う</b><a href="owners-engineering">オーナーズエンジニアリング</a><a href="pilot-plant">PoC・実証プラントの設計与件づくり</a></div>
+    <div><b>いまの設備と技術を活かす</b><a href="incineration">焼却施設の運転幅の見える化</a><a href="handover">設計技術の引き継ぎ教材づくり</a></div>
+    <div><b>自社で取り組む技術</b><a href="biochar">バイオ炭の製造と事業化</a><a href="silica">もみ殻由来シリカ</a></div>
+    <div><b>会社</b><a href="./" aria-current="page">トップ</a><a href="security-policy">情報セキュリティ基本方針</a><a href="privacy-policy">プライバシーポリシー</a><a href="https://www.youtube.com/@TokyoKyodoTechnology" target="_blank" rel="noopener">YouTube チャンネル</a><a href="en" lang="en" hreflang="en">English</a></div>
   </div>
   <div class="footer-brand">
     <img src="assets/logo.png" alt="">

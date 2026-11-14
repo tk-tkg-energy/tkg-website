@@ -1,0 +1,10 @@
+/* 書体（2026-11-14・候補 b：見出しは明朝のまま／本文とラベルを決めた書体に）。表示・本文・ラベルの3つを変数で決める。
+   既存のスタイルは見出しに var(--serif)、ラベルに var(--font-label) を見ている */
+:root{
+  --font-display:"Shippori Mincho","Yu Mincho","YuMincho","Hiragino Mincho ProN",serif;
+  --font-body:"IBM Plex Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+  --font-label:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --serif:var(--font-display);
+}
+body{font-family:var(--font-body)}
+button,input,select,textarea{font-family:inherit}
